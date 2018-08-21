@@ -1,0 +1,84 @@
+﻿<#@include file="..\..\..\Base\Templates\Include.tt"#>
+<?php
+
+namespace App\Http\ApiControllers;
+
+use Illuminate\Http\Request;
+use App\Http\Requests;
+use App\Http\Controllers\Controller;
+use App\ViewModels\;
+
+/**
+* <#=_apiInfo.Description#>
+*/
+class <#=_apiInfo.Id#> extends Controller
+{
+<#
+    foreach(var action in _apiInfo.Actions)
+    {
+#>
+     /**
+     * Description of api action
+<#
+    foreach(var parameter in action.Parameters)
+    {
+#>
+     * @param  <#=PHPType(parameter.Type)#>  $<#=TextConverter.CamelCase(parameter.Id)#>
+<#
+    }
+#>
+     * @return Response
+     */
+<#
+    if(action.Parameters !=null && action.Parameters.Count>0)
+    {
+#>
+     public function <#=TextConverter.CamelCase(action.Id)#>
+     (
+<#
+		int count = action.Parameters.Count -1;
+        int counter = 0;
+      foreach(var parameter in action.Parameters)
+       {
+		   if(counter == count)
+		   {
+#>
+        $<#=TextConverter.CamelCase(parameter.Id)#>
+<#
+		}else{
+#>
+		$<#=TextConverter.CamelCase(parameter.Id)#>,
+<#
+		}
+		counter++;
+       }
+#>
+     )
+<#
+    }else{
+#>
+     public function <#=TextConverter.CamelCase(action.Id)#>()
+<#
+    }
+#>
+<#
+    if(action.ReturnType != null)
+    {
+#>
+    : <#=action.ReturnType.Id#>
+<#
+    }
+    else
+    {
+#>
+<#
+    }
+#>
+    {
+
+    }
+
+<#
+    }
+#>
+}

@@ -1,0 +1,150 @@
+﻿<#@ include file="..\..\..\Base\Templates\Include.tt" #>
+<#
+    var entity = (EntityInfo)Model;
+    var controllerName = TextConverter.PascalCase(entity.Id) + _controllerSuffix;
+    var entityName = TextConverter.PascalCase(entity.Id) + _modelSuffix;
+    var keyName = GetPrimaryKey();
+#>
+<?php
+
+namespace App\Http\Controllers\WebControllers;
+
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+
+use App\Models\\<#=entityName#>;
+
+class <#=controllerName#> extends Controller
+{
+
+     /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        $items = <#=entityName#>::all();
+        return view("<#=TextConverter.CamelCase(entity.Id)#>.index")->withItems($items);
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+         return view("<#=TextConverter.CamelCase(entity.Id)#>.create");
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        $inputData = $request->input(); 
+
+        $newItem = new <#=entityName#>;
+<#
+    foreach(PropertyInfo property in entity.AllProperties())
+    {
+        if(!property.IsKey)
+        {
+            string propertyName = TextConverter.CamelCase(property.Id);
+#>
+        $newItem-><#=propertyName#> = $inputData["<#=propertyName#>"];
+<#
+        }
+    }
+#>
+        $newItem->save();
+
+        flash('<#=Helper.WordSeperator(TextConverter.PascalCase(entity.Id))#> is created!')->success();
+
+        return redirect()->action('WebControllers\\<#=controllerName#>@index');
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($<#=keyName#>)
+    {
+        $item = <#=entityName#>::where('<#=keyName#>', $<#=keyName#>)->firstOrFail();
+
+        if(!empty($_REQUEST['showdelete']))
+        {
+            return view("<#=TextConverter.CamelCase(entity.Id)#>.delete")->withItem($item);
+        }
+
+        return view("<#=TextConverter.CamelCase(entity.Id)#>.show")->withItem($item);
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($<#=keyName#>)
+    {
+        $item = <#=entityName#>::where('<#=keyName#>', $<#=keyName#>)->firstOrFail();
+
+        return view("<#=TextConverter.CamelCase(entity.Id)#>.edit")->withItem($item);
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $<#=keyName#>)
+    {
+        $dataToUpdate = $request->input();
+
+        $item = <#=entityName#>::where('<#=keyName#>', $<#=keyName#>)->firstOrFail();
+
+<#
+    foreach(PropertyInfo property in entity.AllProperties())
+    {
+        if(!property.IsKey)
+        {
+            string propertyName = TextConverter.CamelCase(property.Id);
+#>
+        $item-><#=propertyName#> = $dataToUpdate["<#=propertyName#>"];
+<#
+        }
+    }
+#>
+
+        $item->save();
+
+        flash('<#=Helper.WordSeperator(TextConverter.PascalCase(entity.Id))#> is updated!')->success();
+
+        return redirect()->action('WebControllers\\<#=controllerName#>@index');
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(Request $request, $<#=keyName#>)
+    {
+        $item = <#=entityName#>::where('<#=keyName#>', $<#=keyName#>)->firstOrFail();
+        $item->delete();
+
+        flash('<#=Helper.WordSeperator(TextConverter.PascalCase(entity.Id))#> is deleted!')->success();
+
+        return redirect()->action('WebControllers\\<#=controllerName#>@index');
+    }
+}

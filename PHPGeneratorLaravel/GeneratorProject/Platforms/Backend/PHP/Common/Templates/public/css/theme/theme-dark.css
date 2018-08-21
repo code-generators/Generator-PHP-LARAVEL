@@ -1,0 +1,247 @@
+body {
+    background-color: #16191d;
+    color: #8d939e;
+}
+
+/* button design */
+
+.btn.btn-primary {
+    background-color: #f04940;
+    border-color: #f04940;
+}
+
+    .btn.btn-primary:hover {
+        color: #fff;
+        background-color: #d42f27;
+        border-color: #d42f27;
+    }
+
+    .btn.btn-primary:focus {
+        box-shadow: 0 0 0 0.2rem rgba(240, 73, 64, 0.5);
+    }
+
+.btn-primary:not(:disabled):not(.disabled):active {
+    background-color: #f04940;
+    border-color: #f04940;
+}
+
+    .btn-primary:not(:disabled):not(.disabled):active:focus {
+        box-shadow: 0 0 0 0.2rem rgba(240, 73, 64, 0.5);
+    }
+
+.btn-link {
+    color: #ffffff;
+}
+
+    .btn-link:hover {
+        color: #9aa1a7;
+    }
+
+/* login form  design */
+
+.light-theme-logo {
+    display: none;
+}
+
+.dark-theme-logo {
+    display: inline-block;
+}
+
+.login-form {
+    background: #252830;
+}
+
+    .login-form h5 {
+        color: #8d939e;
+    }
+
+    .login-form label {
+        color: #8d939e;
+    }
+
+/* jumbotron design */
+
+.jumbotron {
+    background-color: #252830;
+}
+
+/* page wrapper */
+
+.page-wrapper {
+    background-color: #16191d;
+}
+
+/* form design */
+
+.form-control {
+    color: #ffffff;
+    border-color: #1a1d22;
+    background-color: #1a1d22;
+}
+
+    .form-control:focus {
+        background: #1a1d22;
+        border-color: #526170;
+        color: #ffffff;
+        box-shadow: none;
+    }
+
+/* footer design */
+
+.footer {
+    color: #6c757d;
+}
+
+/* header design */
+
+.header {
+    background: #252830;
+    box-shadow: 1px 0 5px rgba(0, 0, 0, 0.38);
+}
+
+    .header .header-navbar {
+        background-color: #252830;
+    }
+
+        .header .header-navbar .header-divider {
+            background-color: #dee2e6;
+        }
+
+        .header .header-navbar .navbar-brand {
+            color: #ffffff !important;
+        }
+
+    .header .header-navbar-logo .logo-image {
+        background-image: url(../../../assets/images/mobioos-logo-white.svg);
+    }
+
+
+.navbar-menu .nav-menu-link {
+    color: #8d939e;
+}
+
+    .navbar-menu .nav-menu-link:hover {
+        color: #f04940;
+    }
+
+.header .header-navbar .navbar-wrapper .notification-box, .header .header-navbar .navbar-wrapper .mail-box {
+    color: #8d939e;
+}
+
+.user-profile .no-image {
+    background-color: #f04940;
+}
+
+.dropdown .dropdown-menu {
+    border-color: #6c757d;
+    background-color: #252830;
+}
+
+.dropdown .dropdown-item-text {
+    background-color: #303942;
+    color: #6c757d;
+}
+
+.dropdown .dropdown-item {
+    color: #8d939e;
+}
+
+    .dropdown .dropdown-item:hover {
+        background-color: #f04940;
+        color: #ffffff;
+    }
+
+.bg-light {
+    background-color: #252830 !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #8d939e;
+}
+
+    .navbar-light .navbar-nav .nav-link:hover {
+        color: #f04940;
+    }
+
+.navbar-light .navbar-nav .active > .nav-link {
+    color: #f04940;
+}
+
+/* sidebar design */
+
+.left-sidebar {
+    box-shadow: 1px 0 20px rgba(0, 0, 0, 0.18);
+    background-color: #252830;
+}
+
+    .left-sidebar .sidebar-menu > ul > li.menu-title {
+        color: #d4d4d4;
+    }
+
+    .left-sidebar .sidebar-menu > ul > li > a {
+        color: #8d939e;
+        border-color: #252830;
+    }
+
+        .left-sidebar .sidebar-menu > ul > li > a.active {
+            border-color: #f04940;
+            background: #2d3038;
+        }
+
+        .left-sidebar .sidebar-menu > ul > li > a:hover {
+            color: #f04940;
+        }
+
+/*page title */
+
+.page-titles {
+    background: #252830;
+    box-shadow: 1px 0 5px rgba(0, 0, 0, 0.08);
+}
+
+    .page-titles h3 {
+        color: #8d939e;
+    }
+
+    .page-titles .breadcrumb li.active {
+        color: #6c757d;
+    }
+
+    .page-titles .breadcrumb li a {
+        color: #9aa1a7;
+    }
+
+/* card design */
+
+.card {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    background: #252830;
+}
+
+    .card .card-title {
+        color: #8d939e;
+    }
+
+        .card .card-title h4 {
+            color: #8d939e;
+        }
+
+/*  table design */
+
+table.table td, th {
+    border-top: 1px solid #363a44;
+}
+
+table.table thead th {
+    border-top: 1px solid #363a44;
+    border-bottom: 1px solid #363a44;
+    color: #8d939e;
+}
+
+table.table tbody td {
+    color: #8d939e;
+}
+
+table.table td .details-view {
+    color: #f04940;
+}

@@ -1,0 +1,59 @@
+﻿<#@ include file="..\..\Base\Templates\Include.tt" #><#var _entityInfo = (EntityInfo)Model;#>
+<# var keyName = GetPrimaryKey();#>
+@extends('layouts.master')
+
+@section('content')
+
+<div class="container-fluid form-horizontal">
+ <div class="col-lg-12">
+    <div class="card">
+      <div class="card-title">
+        <h4>
+          <#=Helper.WordSeperator(TextConverter.PascalCase(_entityInfo.Id))#> - List Form</h4>
+        <a class="btn btn-primary btn-sm float-right" href="/<#=_entityInfo.Id.ToLower()#>/create">Create New</a>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+<#
+    foreach(var property in _entityInfo.AllProperties())
+    {
+#>
+                  <th><#=Helper.WordSeperator(TextConverter.PascalCase(property.Id))#></th>
+<#
+    }
+#>
+              </tr>
+            </thead>
+            <tbody>
+            @forelse ($items as $item)
+              <tr>
+<#
+      foreach(var property in _entityInfo.AllProperties())
+      {
+#>
+                  <td>{{$item-><#=TextConverter.CamelCase(property.Id)#>}}</td>
+<#
+      }
+#>
+                  <td>
+                      <a class="btn btn-info btn-sm" href="/<#=_entityInfo.Id.ToLower()#>/{{$item-><#=keyName#>}}">Details</a>
+                      <a class="btn btn-warning btn-sm" href="/<#=_entityInfo.Id.ToLower()#>/{{$item-><#=keyName#>}}/edit">Edit</a>
+                      <a class="btn btn-danger btn-sm" href="/<#=_entityInfo.Id.ToLower()#>/{{$item-><#=keyName#>}}?showdelete=true">Delete</a>
+                 </td>
+              </tr>
+               @empty 
+                <p>There no <strong><#=Helper.WordSeperator(TextConverter.PascalCase(_entityInfo.Id))#></strong> defined. Click on <b>Create New</b> button to create new <#=Helper.WordSeperator(TextConverter.PascalCase(_entityInfo.Id))#>.</p>
+              @endforelse
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+ </div>
+</div>
+
+@endsection 
