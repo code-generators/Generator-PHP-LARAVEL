@@ -17,7 +17,7 @@ namespace GeneratorProject.Platforms.Backend.PHP
             string databaseHost, string databasePort, string databaseUsername, string databasePassword) : base(null, applicationId)
         {
             _databaseType = databaseType;
-            _databaseName = "product_management"; //databaseName;
+            _databaseName = databaseName;
             _databaseHost = databaseHost;
             _databasePort = databasePort;
             _databaseUsername = databaseUsername;
