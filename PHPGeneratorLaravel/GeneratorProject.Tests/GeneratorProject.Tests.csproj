@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <!--/-:cnd -->
   <PropertyGroup>
-    <TargetFramework>net461</TargetFramework>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Manifest\addons.json" />
@@ -90,6 +90,12 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.5.0" />
+    <PackageReference Include="Mobioos.Foundation.Jade" Version="1.0.0" />
+    <PackageReference Include="Mobioos.Foundation.Prompt" Version="1.0.2" />
+    <PackageReference Include="Mobioos.Foundation.Prompt.Infrastructure" Version="1.0.1" />
+    <PackageReference Include="Mobioos.Scaffold.BaseGenerators" Version="1.0.2" />
+    <PackageReference Include="Mobioos.Scaffold.BaseInfrastructure" Version="1.0.2" />
+    <PackageReference Include="WorkflowCore" Version="1.0.0" />
     <PackageReference Include="xunit" Version="2.3.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.3.1" />
     <DotNetCliToolReference Include="dotnet-xunit" Version="2.3.1" />

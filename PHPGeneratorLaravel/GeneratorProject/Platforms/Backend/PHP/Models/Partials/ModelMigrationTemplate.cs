@@ -1,7 +1,6 @@
-﻿using System;
-
-using Mobioos.Foundation.Jade.Models;
-using Mobioos.Scaffold.TextTemplating;
+﻿using Mobioos.Foundation.Jade.Models;
+using Mobioos.Scaffold.BaseGenerators.TextTemplating;
+using System;
 
 namespace GeneratorProject.Platforms.Backend.PHP
 {
@@ -12,7 +11,6 @@ namespace GeneratorProject.Platforms.Backend.PHP
         public ModelMigrationTemplate(EntityInfo entityInfo) : base(entityInfo)
         {
             _entityInfo = entityInfo;
-            //dateString = string.Format("{0}_{1}_{2}_{3}", DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day,DateTime.Now.Ticks);
             dateString = string.Format("{0}_{1}_{2}", DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
         }
 

@@ -1,9 +1,5 @@
 ﻿using Mobioos.Foundation.Jade.Models;
-using Mobioos.Scaffold.TextTemplating;
-using Mobioos.Scaffold.Core.Runtime.Activities;
-using Mobioos.Scaffold.Core.Runtime.Attributes;
-using Mobioos.Scaffold.Infrastructure.Runtime;
-using Mobioos.Foundation.Jade.Exceptions;
+using Mobioos.Scaffold.BaseGenerators.TextTemplating;
 
 namespace GeneratorProject.Platforms.Backend.PHP
 {

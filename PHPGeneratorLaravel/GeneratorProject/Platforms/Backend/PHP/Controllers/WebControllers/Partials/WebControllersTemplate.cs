@@ -1,8 +1,7 @@
 ﻿using Mobioos.Foundation.Jade.Models;
-using Mobioos.Scaffold.TextTemplating;
+using Mobioos.Scaffold.BaseGenerators.TextTemplating;
+using Mobioos.Scaffold.BaseGenerators.Helpers;
 using Mobioos.Foundation.Jade.Extensions;
-using Mobioos.Scaffold.Generators.Helpers;
-
 using System.Linq;
 
 namespace GeneratorProject.Platforms.Backend.PHP
@@ -21,8 +20,13 @@ namespace GeneratorProject.Platforms.Backend.PHP
         public string GetPrimaryKey()
         {
             var model = (EntityInfo)Model;
-            var property = model.AllProperties().Where(p => p.IsKey).FirstOrDefault<PropertyInfo>();
-            return TextConverter.CamelCase(property.Id);
+
+            if (model != null && model.AllProperties() != null)
+            {
+                var property = model.AllProperties().FirstOrDefault<PropertyInfo>(p => p.IsKey.Equals(true));
+                return property != null ? TextConverter.CamelCase(property.Id) : string.Empty;
+            }
+            return string.Empty;
         }
 
         public string PHPType(string type)
@@ -36,9 +40,6 @@ namespace GeneratorProject.Platforms.Backend.PHP
                 case "date":
                     returnType = "dateTime";
                     break;
-                //case "boolean":
-                //    returnType = "boolean";
-                //    break;
                 default:
                     returnType = type;
                     break;

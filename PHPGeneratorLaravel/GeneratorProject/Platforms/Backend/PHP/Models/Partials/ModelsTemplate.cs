@@ -1,6 +1,6 @@
 ﻿using Mobioos.Foundation.Jade.Models;
-using Mobioos.Scaffold.TextTemplating;
-using Mobioos.Scaffold.Generators.Helpers;
+using Mobioos.Scaffold.BaseGenerators.TextTemplating;
+using Mobioos.Scaffold.BaseGenerators.Helpers;
 
 namespace GeneratorProject.Platforms.Backend.PHP
 {

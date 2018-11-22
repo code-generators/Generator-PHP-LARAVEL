@@ -1,5 +1,5 @@
-﻿using Mobioos.Scaffold.TextTemplating;
-using Mobioos.Foundation.Jade.Models;
+﻿using Mobioos.Foundation.Jade.Models;
+using Mobioos.Scaffold.BaseGenerators.TextTemplating;
 
 namespace GeneratorProject.Platforms.Backend.PHP
 {

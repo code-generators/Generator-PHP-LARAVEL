@@ -1,5 +1,7 @@
 ﻿<#@ include file="..\..\Base\Templates\Include.tt" #>
-<#var smartApp = (SmartAppInfo)Model;#>
+<#
+    var smartApp = (SmartAppInfo)Model;
+#>
 <?php
 
 use Illuminate\Http\Request;

@@ -1,4 +1,7 @@
-﻿<#@ include file="..\..\Base\Templates\Include.tt" #><#var _entityInfo = (EntityInfo)Model;#>
+﻿<#@ include file="..\..\Base\Templates\Include.tt" #>
+<#
+    var _entityInfo = (EntityInfo)Model;
+#>
 @extends('layouts.master')
 
 @section('content')

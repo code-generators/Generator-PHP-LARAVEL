@@ -12,8 +12,8 @@ namespace GeneratorProject.Platforms.Backend.PHP
     using System.Linq;
     using System.Text;
     using System.Collections.Generic;
-    using Mobioos.Scaffold.TextTemplating;
-    using Mobioos.Scaffold.Generators.Helpers;
+    using Mobioos.Scaffold.BaseGenerators.TextTemplating;
+    using Mobioos.Scaffold.BaseGenerators.Helpers;
     using Mobioos.Foundation.Jade.Models;
     using Mobioos.Foundation.Jade.Extensions;
     using System;
@@ -22,7 +22,7 @@ namespace GeneratorProject.Platforms.Backend.PHP
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "D:\Working\Mobioos\Generators\PHP\PHPGeneratorLaravel1\PHPGeneratorLaravel1\GeneratorProject\Platforms\Backend\PHP\Controllers\ApiControllers\Templates\ApiControllersTemplate.tt"
+    #line 1 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Controllers\ApiControllers\Templates\ApiControllersTemplate.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "15.0.0.0")]
     public partial class ApiControllersTemplate : TemplateBase
     {
@@ -36,21 +36,21 @@ namespace GeneratorProject.Platforms.Backend.PHP
                     "App\\Http\\Requests;\r\nuse App\\Http\\Controllers\\Controller;\r\nuse App\\ViewModels\\;\r\n" +
                     "\r\n/**\r\n* ");
             
-            #line 12 "D:\Working\Mobioos\Generators\PHP\PHPGeneratorLaravel1\PHPGeneratorLaravel1\GeneratorProject\Platforms\Backend\PHP\Controllers\ApiControllers\Templates\ApiControllersTemplate.tt"
+            #line 12 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Controllers\ApiControllers\Templates\ApiControllersTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_apiInfo.Description));
             
             #line default
             #line hidden
             this.Write("\r\n*/\r\nclass ");
             
-            #line 14 "D:\Working\Mobioos\Generators\PHP\PHPGeneratorLaravel1\PHPGeneratorLaravel1\GeneratorProject\Platforms\Backend\PHP\Controllers\ApiControllers\Templates\ApiControllersTemplate.tt"
+            #line 14 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Controllers\ApiControllers\Templates\ApiControllersTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_apiInfo.Id));
             
             #line default
             #line hidden
             this.Write(" extends Controller\r\n{\r\n");
             
-            #line 16 "D:\Working\Mobioos\Generators\PHP\PHPGeneratorLaravel1\PHPGeneratorLaravel1\GeneratorProject\Platforms\Backend\PHP\Controllers\ApiControllers\Templates\ApiControllersTemplate.tt"
+            #line 16 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Controllers\ApiControllers\Templates\ApiControllersTemplate.tt"
 
     foreach(var action in _apiInfo.Actions)
     {
@@ -60,7 +60,7 @@ namespace GeneratorProject.Platforms.Backend.PHP
             #line hidden
             this.Write("     /**\r\n     * Description of api action\r\n");
             
-            #line 22 "D:\Working\Mobioos\Generators\PHP\PHPGeneratorLaravel1\PHPGeneratorLaravel1\GeneratorProject\Platforms\Backend\PHP\Controllers\ApiControllers\Templates\ApiControllersTemplate.tt"
+            #line 22 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Controllers\ApiControllers\Templates\ApiControllersTemplate.tt"
 
     foreach(var parameter in action.Parameters)
     {
@@ -70,21 +70,21 @@ namespace GeneratorProject.Platforms.Backend.PHP
             #line hidden
             this.Write("     * @param  ");
             
-            #line 26 "D:\Working\Mobioos\Generators\PHP\PHPGeneratorLaravel1\PHPGeneratorLaravel1\GeneratorProject\Platforms\Backend\PHP\Controllers\ApiControllers\Templates\ApiControllersTemplate.tt"
+            #line 26 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Controllers\ApiControllers\Templates\ApiControllersTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(PHPType(parameter.Type)));
             
             #line default
             #line hidden
             this.Write("  $");
             
-            #line 26 "D:\Working\Mobioos\Generators\PHP\PHPGeneratorLaravel1\PHPGeneratorLaravel1\GeneratorProject\Platforms\Backend\PHP\Controllers\ApiControllers\Templates\ApiControllersTemplate.tt"
+            #line 26 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Controllers\ApiControllers\Templates\ApiControllersTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(TextConverter.CamelCase(parameter.Id)));
             
             #line default
             #line hidden
             this.Write("\r\n");
             
-            #line 27 "D:\Working\Mobioos\Generators\PHP\PHPGeneratorLaravel1\PHPGeneratorLaravel1\GeneratorProject\Platforms\Backend\PHP\Controllers\ApiControllers\Templates\ApiControllersTemplate.tt"
+            #line 27 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Controllers\ApiControllers\Templates\ApiControllersTemplate.tt"
 
     }
 
@@ -93,7 +93,7 @@ namespace GeneratorProject.Platforms.Backend.PHP
             #line hidden
             this.Write("     * @return Response\r\n     */\r\n");
             
-            #line 32 "D:\Working\Mobioos\Generators\PHP\PHPGeneratorLaravel1\PHPGeneratorLaravel1\GeneratorProject\Platforms\Backend\PHP\Controllers\ApiControllers\Templates\ApiControllersTemplate.tt"
+            #line 32 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Controllers\ApiControllers\Templates\ApiControllersTemplate.tt"
 
     if(action.Parameters !=null && action.Parameters.Count>0)
     {
@@ -103,14 +103,14 @@ namespace GeneratorProject.Platforms.Backend.PHP
             #line hidden
             this.Write("     public function ");
             
-            #line 36 "D:\Working\Mobioos\Generators\PHP\PHPGeneratorLaravel1\PHPGeneratorLaravel1\GeneratorProject\Platforms\Backend\PHP\Controllers\ApiControllers\Templates\ApiControllersTemplate.tt"
+            #line 36 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Controllers\ApiControllers\Templates\ApiControllersTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(TextConverter.CamelCase(action.Id)));
             
             #line default
             #line hidden
             this.Write("\r\n     (\r\n");
             
-            #line 38 "D:\Working\Mobioos\Generators\PHP\PHPGeneratorLaravel1\PHPGeneratorLaravel1\GeneratorProject\Platforms\Backend\PHP\Controllers\ApiControllers\Templates\ApiControllersTemplate.tt"
+            #line 38 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Controllers\ApiControllers\Templates\ApiControllersTemplate.tt"
 
 		int count = action.Parameters.Count -1;
         int counter = 0;
@@ -124,14 +124,14 @@ namespace GeneratorProject.Platforms.Backend.PHP
             #line hidden
             this.Write("        $");
             
-            #line 46 "D:\Working\Mobioos\Generators\PHP\PHPGeneratorLaravel1\PHPGeneratorLaravel1\GeneratorProject\Platforms\Backend\PHP\Controllers\ApiControllers\Templates\ApiControllersTemplate.tt"
+            #line 46 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Controllers\ApiControllers\Templates\ApiControllersTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(TextConverter.CamelCase(parameter.Id)));
             
             #line default
             #line hidden
             this.Write("\r\n");
             
-            #line 47 "D:\Working\Mobioos\Generators\PHP\PHPGeneratorLaravel1\PHPGeneratorLaravel1\GeneratorProject\Platforms\Backend\PHP\Controllers\ApiControllers\Templates\ApiControllersTemplate.tt"
+            #line 47 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Controllers\ApiControllers\Templates\ApiControllersTemplate.tt"
 
 		}else{
 
@@ -140,14 +140,14 @@ namespace GeneratorProject.Platforms.Backend.PHP
             #line hidden
             this.Write("\t\t$");
             
-            #line 50 "D:\Working\Mobioos\Generators\PHP\PHPGeneratorLaravel1\PHPGeneratorLaravel1\GeneratorProject\Platforms\Backend\PHP\Controllers\ApiControllers\Templates\ApiControllersTemplate.tt"
+            #line 50 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Controllers\ApiControllers\Templates\ApiControllersTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(TextConverter.CamelCase(parameter.Id)));
             
             #line default
             #line hidden
             this.Write(",\r\n");
             
-            #line 51 "D:\Working\Mobioos\Generators\PHP\PHPGeneratorLaravel1\PHPGeneratorLaravel1\GeneratorProject\Platforms\Backend\PHP\Controllers\ApiControllers\Templates\ApiControllersTemplate.tt"
+            #line 51 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Controllers\ApiControllers\Templates\ApiControllersTemplate.tt"
 
 		}
 		counter++;
@@ -158,7 +158,7 @@ namespace GeneratorProject.Platforms.Backend.PHP
             #line hidden
             this.Write("     )\r\n");
             
-            #line 57 "D:\Working\Mobioos\Generators\PHP\PHPGeneratorLaravel1\PHPGeneratorLaravel1\GeneratorProject\Platforms\Backend\PHP\Controllers\ApiControllers\Templates\ApiControllersTemplate.tt"
+            #line 57 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Controllers\ApiControllers\Templates\ApiControllersTemplate.tt"
 
     }else{
 
@@ -167,14 +167,14 @@ namespace GeneratorProject.Platforms.Backend.PHP
             #line hidden
             this.Write("     public function ");
             
-            #line 60 "D:\Working\Mobioos\Generators\PHP\PHPGeneratorLaravel1\PHPGeneratorLaravel1\GeneratorProject\Platforms\Backend\PHP\Controllers\ApiControllers\Templates\ApiControllersTemplate.tt"
+            #line 60 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Controllers\ApiControllers\Templates\ApiControllersTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(TextConverter.CamelCase(action.Id)));
             
             #line default
             #line hidden
             this.Write("()\r\n");
             
-            #line 61 "D:\Working\Mobioos\Generators\PHP\PHPGeneratorLaravel1\PHPGeneratorLaravel1\GeneratorProject\Platforms\Backend\PHP\Controllers\ApiControllers\Templates\ApiControllersTemplate.tt"
+            #line 61 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Controllers\ApiControllers\Templates\ApiControllersTemplate.tt"
 
     }
 
@@ -182,7 +182,7 @@ namespace GeneratorProject.Platforms.Backend.PHP
             #line default
             #line hidden
             
-            #line 64 "D:\Working\Mobioos\Generators\PHP\PHPGeneratorLaravel1\PHPGeneratorLaravel1\GeneratorProject\Platforms\Backend\PHP\Controllers\ApiControllers\Templates\ApiControllersTemplate.tt"
+            #line 64 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Controllers\ApiControllers\Templates\ApiControllersTemplate.tt"
 
     if(action.ReturnType != null)
     {
@@ -192,14 +192,14 @@ namespace GeneratorProject.Platforms.Backend.PHP
             #line hidden
             this.Write("    : ");
             
-            #line 68 "D:\Working\Mobioos\Generators\PHP\PHPGeneratorLaravel1\PHPGeneratorLaravel1\GeneratorProject\Platforms\Backend\PHP\Controllers\ApiControllers\Templates\ApiControllersTemplate.tt"
+            #line 68 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Controllers\ApiControllers\Templates\ApiControllersTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(action.ReturnType.Id));
             
             #line default
             #line hidden
             this.Write("\r\n");
             
-            #line 69 "D:\Working\Mobioos\Generators\PHP\PHPGeneratorLaravel1\PHPGeneratorLaravel1\GeneratorProject\Platforms\Backend\PHP\Controllers\ApiControllers\Templates\ApiControllersTemplate.tt"
+            #line 69 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Controllers\ApiControllers\Templates\ApiControllersTemplate.tt"
 
     }
     else
@@ -209,7 +209,7 @@ namespace GeneratorProject.Platforms.Backend.PHP
             #line default
             #line hidden
             
-            #line 74 "D:\Working\Mobioos\Generators\PHP\PHPGeneratorLaravel1\PHPGeneratorLaravel1\GeneratorProject\Platforms\Backend\PHP\Controllers\ApiControllers\Templates\ApiControllersTemplate.tt"
+            #line 74 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Controllers\ApiControllers\Templates\ApiControllersTemplate.tt"
 
     }
 
@@ -218,7 +218,7 @@ namespace GeneratorProject.Platforms.Backend.PHP
             #line hidden
             this.Write("    {\r\n\r\n    }\r\n\r\n");
             
-            #line 81 "D:\Working\Mobioos\Generators\PHP\PHPGeneratorLaravel1\PHPGeneratorLaravel1\GeneratorProject\Platforms\Backend\PHP\Controllers\ApiControllers\Templates\ApiControllersTemplate.tt"
+            #line 81 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Controllers\ApiControllers\Templates\ApiControllersTemplate.tt"
 
     }
 

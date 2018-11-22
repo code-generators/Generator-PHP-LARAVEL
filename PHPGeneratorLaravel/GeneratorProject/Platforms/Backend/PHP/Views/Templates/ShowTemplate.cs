@@ -12,8 +12,8 @@ namespace GeneratorProject.Platforms.Backend.PHP
     using System.Linq;
     using System.Text;
     using System.Collections.Generic;
-    using Mobioos.Scaffold.TextTemplating;
-    using Mobioos.Scaffold.Generators.Helpers;
+    using Mobioos.Scaffold.BaseGenerators.TextTemplating;
+    using Mobioos.Scaffold.BaseGenerators.Helpers;
     using Mobioos.Foundation.Jade.Models;
     using Mobioos.Foundation.Jade.Extensions;
     using System;
@@ -22,7 +22,7 @@ namespace GeneratorProject.Platforms.Backend.PHP
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\ShowTemplate.tt"
+    #line 1 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\ShowTemplate.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "15.0.0.0")]
     public partial class ShowTemplate : TemplateBase
     {
@@ -33,23 +33,25 @@ namespace GeneratorProject.Platforms.Backend.PHP
         public override string TransformText()
         {
             
-            #line 1 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\ShowTemplate.tt"
-var _entityInfo = (EntityInfo)Model;
+            #line 2 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\ShowTemplate.tt"
+
+    var _entityInfo = (EntityInfo)Model;
+
             
             #line default
             #line hidden
             this.Write("@extends(\'layouts.master\')\r\n\r\n@section(\'content\')\r\n\r\n<div class=\"container-fluid " +
-                    "form-horizontal\">\n  <div class=\"col-lg-12\">\n    <div class=\"card\">\n      <div cl" +
-                    "ass=\"card-title\">\n            <h4>");
+                    "form-horizontal\">\r\n  <div class=\"col-lg-12\">\r\n    <div class=\"card\">\r\n      <div" +
+                    " class=\"card-title\">\r\n            <h4>");
             
-            #line 6 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\ShowTemplate.tt"
+            #line 13 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\ShowTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Helper.WordSeperator(TextConverter.PascalCase(_entityInfo.Id))));
             
             #line default
             #line hidden
-            this.Write(" - Details Form</h4>\n      </div>\n      <div class=\"card-body\">\n");
+            this.Write(" - Details Form</h4>\r\n      </div>\r\n      <div class=\"card-body\">\r\n");
             
-            #line 6 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\ShowTemplate.tt"
+            #line 16 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\ShowTemplate.tt"
 
     foreach(var property in _entityInfo.AllProperties())
     {
@@ -59,31 +61,31 @@ var _entityInfo = (EntityInfo)Model;
             
             #line default
             #line hidden
-            this.Write("\n        <div class=\"row\">\n            <label for=\"");
+            this.Write("        <div class=\"row\">\r\n            <label for=\"");
             
-            #line 7 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\ShowTemplate.tt"
+            #line 23 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\ShowTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(TextConverter.CamelCase(property.Id)));
             
             #line default
             #line hidden
             this.Write("\" class = \"col-sm-2 col-form-label\">");
             
-            #line 7 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\ShowTemplate.tt"
+            #line 23 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\ShowTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Helper.WordSeperator(TextConverter.PascalCase(property.Id))));
             
             #line default
             #line hidden
-            this.Write("</label>\n            <div class=\"col-sm-10 label-detail\">\n                {{$item" +
-                    "->");
+            this.Write("</label>\r\n            <div class=\"col-sm-10 label-detail\">\r\n                {{$it" +
+                    "em->");
             
-            #line 7 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\ShowTemplate.tt"
+            #line 25 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\ShowTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(TextConverter.CamelCase(property.Id)));
             
             #line default
             #line hidden
-            this.Write("}}\n            </div>\n        </div>\n");
+            this.Write("}}\r\n            </div>\r\n        </div>\r\n");
             
-            #line 7 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\ShowTemplate.tt"
+            #line 28 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\ShowTemplate.tt"
 
         }
           }
@@ -91,23 +93,23 @@ var _entityInfo = (EntityInfo)Model;
             
             #line default
             #line hidden
-            this.Write("\n        <div class=\"row form-action\">\n           <div class=\"col-sm-10\">\n       " +
-                    "         <a class=\"btn btn-warning\" href=\"/");
+            this.Write("        <div class=\"row form-action\">\r\n           <div class=\"col-sm-10\">\r\n      " +
+                    "          <a class=\"btn btn-warning\" href=\"/");
             
-            #line 7 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\ShowTemplate.tt"
+            #line 34 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\ShowTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_entityInfo.Id.ToLower()));
             
             #line default
             #line hidden
             this.Write("/{{$item->");
             
-            #line 7 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\ShowTemplate.tt"
+            #line 34 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\ShowTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(GetPrimaryKey()));
             
             #line default
             #line hidden
-            this.Write("}}/edit\">Edit</a>\n           </div>\n      </div>\n      </div>\n    </div>\n  </div>" +
-                    "\n</div>\n\n@endsection ");
+            this.Write("}}/edit\">Edit</a>\r\n           </div>\r\n      </div>\r\n      </div>\r\n    </div>\r\n  <" +
+                    "/div>\r\n</div>\r\n\r\n@endsection ");
             return this.GenerationEnvironment.ToString();
         }
     }

@@ -12,8 +12,8 @@ namespace GeneratorProject.Platforms.Backend.PHP
     using System.Linq;
     using System.Text;
     using System.Collections.Generic;
-    using Mobioos.Scaffold.TextTemplating;
-    using Mobioos.Scaffold.Generators.Helpers;
+    using Mobioos.Scaffold.BaseGenerators.TextTemplating;
+    using Mobioos.Scaffold.BaseGenerators.Helpers;
     using Mobioos.Foundation.Jade.Models;
     using Mobioos.Foundation.Jade.Extensions;
     using System;
@@ -22,7 +22,7 @@ namespace GeneratorProject.Platforms.Backend.PHP
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\IndexTemplate.tt"
+    #line 1 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\IndexTemplate.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "15.0.0.0")]
     public partial class IndexTemplate : TemplateBase
     {
@@ -33,13 +33,15 @@ namespace GeneratorProject.Platforms.Backend.PHP
         public override string TransformText()
         {
             
-            #line 1 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\IndexTemplate.tt"
-var _entityInfo = (EntityInfo)Model;
+            #line 2 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\IndexTemplate.tt"
+
+    var _entityInfo = (EntityInfo)Model;
+
             
             #line default
             #line hidden
             
-            #line 2 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\IndexTemplate.tt"
+            #line 5 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\IndexTemplate.tt"
  var keyName = GetPrimaryKey();
             
             #line default
@@ -48,14 +50,14 @@ var _entityInfo = (EntityInfo)Model;
                     "form-horizontal\">\r\n <div class=\"col-lg-12\">\r\n    <div class=\"card\">\r\n      <div " +
                     "class=\"card-title\">\r\n        <h4>\r\n          ");
             
-            #line 12 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\IndexTemplate.tt"
+            #line 15 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\IndexTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Helper.WordSeperator(TextConverter.PascalCase(_entityInfo.Id))));
             
             #line default
             #line hidden
             this.Write(" - List Form</h4>\r\n        <a class=\"btn btn-primary btn-sm float-right\" href=\"/");
             
-            #line 13 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\IndexTemplate.tt"
+            #line 16 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\IndexTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_entityInfo.Id.ToLower()));
             
             #line default
@@ -64,7 +66,7 @@ var _entityInfo = (EntityInfo)Model;
                     "v class=\"table-responsive\">\r\n          <table class=\"table\">\r\n            <thead" +
                     ">\r\n              <tr>\r\n");
             
-            #line 20 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\IndexTemplate.tt"
+            #line 23 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\IndexTemplate.tt"
 
     foreach(var property in _entityInfo.AllProperties())
     {
@@ -74,14 +76,14 @@ var _entityInfo = (EntityInfo)Model;
             #line hidden
             this.Write("                  <th>");
             
-            #line 24 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\IndexTemplate.tt"
+            #line 27 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\IndexTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Helper.WordSeperator(TextConverter.PascalCase(property.Id))));
             
             #line default
             #line hidden
             this.Write("</th>\r\n");
             
-            #line 25 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\IndexTemplate.tt"
+            #line 28 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\IndexTemplate.tt"
 
     }
 
@@ -91,7 +93,7 @@ var _entityInfo = (EntityInfo)Model;
             this.Write("              </tr>\r\n            </thead>\r\n            <tbody>\r\n            @fore" +
                     "lse ($items as $item)\r\n              <tr>\r\n");
             
-            #line 33 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\IndexTemplate.tt"
+            #line 36 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\IndexTemplate.tt"
 
       foreach(var property in _entityInfo.AllProperties())
       {
@@ -101,14 +103,14 @@ var _entityInfo = (EntityInfo)Model;
             #line hidden
             this.Write("                  <td>{{$item->");
             
-            #line 37 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\IndexTemplate.tt"
+            #line 40 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\IndexTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(TextConverter.CamelCase(property.Id)));
             
             #line default
             #line hidden
             this.Write("}}</td>\r\n");
             
-            #line 38 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\IndexTemplate.tt"
+            #line 41 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\IndexTemplate.tt"
 
       }
 
@@ -118,28 +120,28 @@ var _entityInfo = (EntityInfo)Model;
             this.Write("                  <td>\r\n                      <a class=\"btn btn-info btn-sm\" href" +
                     "=\"/");
             
-            #line 42 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\IndexTemplate.tt"
+            #line 45 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\IndexTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_entityInfo.Id.ToLower()));
             
             #line default
             #line hidden
             this.Write("/{{$item->");
             
-            #line 42 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\IndexTemplate.tt"
+            #line 45 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\IndexTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(keyName));
             
             #line default
             #line hidden
             this.Write("}}\">Details</a>\r\n                      <a class=\"btn btn-warning btn-sm\" href=\"/");
             
-            #line 43 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\IndexTemplate.tt"
+            #line 46 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\IndexTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_entityInfo.Id.ToLower()));
             
             #line default
             #line hidden
             this.Write("/{{$item->");
             
-            #line 43 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\IndexTemplate.tt"
+            #line 46 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\IndexTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(keyName));
             
             #line default
@@ -147,14 +149,14 @@ var _entityInfo = (EntityInfo)Model;
             this.Write("}}/edit\">Edit</a>\r\n                      <a class=\"btn btn-danger btn-sm\" href=\"/" +
                     "");
             
-            #line 44 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\IndexTemplate.tt"
+            #line 47 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\IndexTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_entityInfo.Id.ToLower()));
             
             #line default
             #line hidden
             this.Write("/{{$item->");
             
-            #line 44 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\IndexTemplate.tt"
+            #line 47 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\IndexTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(keyName));
             
             #line default
@@ -162,14 +164,14 @@ var _entityInfo = (EntityInfo)Model;
             this.Write("}}?showdelete=true\">Delete</a>\r\n                 </td>\r\n              </tr>\r\n    " +
                     "           @empty \r\n                <p>There no <strong>");
             
-            #line 48 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\IndexTemplate.tt"
+            #line 51 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\IndexTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Helper.WordSeperator(TextConverter.PascalCase(_entityInfo.Id))));
             
             #line default
             #line hidden
-            this.Write("</strong> defined. Click on <b>Create New</b> button to create new ");
+            this.Write("</strong> defined. Click on <strong>Create New</strong> button to create new ");
             
-            #line 48 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\IndexTemplate.tt"
+            #line 51 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\IndexTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Helper.WordSeperator(TextConverter.PascalCase(_entityInfo.Id))));
             
             #line default

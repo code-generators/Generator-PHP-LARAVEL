@@ -1,5 +1,4 @@
-﻿using System;
-using Mobioos.Scaffold.TextTemplating;
+﻿using Mobioos.Scaffold.BaseGenerators.TextTemplating;
 
 namespace GeneratorProject.Platforms.Backend.PHP
 {
@@ -22,7 +21,6 @@ namespace GeneratorProject.Platforms.Backend.PHP
             _databasePort = databasePort;
             _databaseUsername = databaseUsername;
             _databasePassword = databasePassword;
-            //_appKey = Guid.NewGuid().ToString("N");
             _appKey = "JnlOR1mG5PnikemPOOEuq8ekQN82SBOJ6xVvB9r/kX4=";
 
         }

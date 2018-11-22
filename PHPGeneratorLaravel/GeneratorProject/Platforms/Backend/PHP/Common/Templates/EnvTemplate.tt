@@ -1,5 +1,5 @@
 <#@ include file="..\..\Base\Templates\Include.tt" #>
-APP_NAME=<#=TextConverter.PascalCase(ApplicationId)#>
+APP_NAME=<#=TextConverter.PascalCase(ApplicationId) #>
 APP_ENV=local
 APP_KEY=base64:<#=_appKey#>
 APP_DEBUG=true

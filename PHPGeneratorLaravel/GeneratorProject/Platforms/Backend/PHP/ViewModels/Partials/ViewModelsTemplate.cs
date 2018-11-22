@@ -1,10 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using Mobioos.Foundation.Jade.Models;
+using Mobioos.Scaffold.BaseGenerators.TextTemplating;
+using System.Collections.Generic;
 using System.Linq;
-
-using Mobioos.Scaffold.Core.Runtime.Attributes;
-using Mobioos.Foundation.Jade.Models;
-using Mobioos.Scaffold.TextTemplating;
-using Mobioos.Foundation.Jade.Extensions;
 
 namespace GeneratorProject.Platforms.Backend.PHP
 {

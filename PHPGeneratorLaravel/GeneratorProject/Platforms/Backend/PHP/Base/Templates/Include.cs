@@ -12,8 +12,8 @@ namespace GeneratorProject.Platforms.Frontend.Example
     using System.Linq;
     using System.Text;
     using System.Collections.Generic;
-    using Mobioos.Scaffold.TextTemplating;
-    using Mobioos.Scaffold.Generators.Helpers;
+    using Mobioos.Scaffold.BaseGenerators.TextTemplating;
+    using Mobioos.Scaffold.BaseGenerators.Helpers;
     using Mobioos.Foundation.Jade.Models;
     using Mobioos.Foundation.Jade.Extensions;
     using System;
@@ -22,7 +22,7 @@ namespace GeneratorProject.Platforms.Frontend.Example
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "D:\Working\Mobioos\Generators\PHP\PHPGeneratorLaravel1\PHPGeneratorLaravel1\GeneratorProject\Platforms\Backend\PHP\Base\Templates\Include.tt"
+    #line 1 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Base\Templates\Include.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "15.0.0.0")]
     public partial class Include : TemplateBase
     {

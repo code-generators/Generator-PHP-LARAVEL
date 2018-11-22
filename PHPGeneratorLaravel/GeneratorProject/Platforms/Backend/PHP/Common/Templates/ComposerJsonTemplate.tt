@@ -1,4 +1,7 @@
-﻿<#@ include file="..\..\Base\Templates\Include.tt"#><#var model = (SmartAppInfo) Model;#>
+﻿<#@ include file="..\..\Base\Templates\Include.tt"#>
+<#
+    var model = (SmartAppInfo) Model;
+#>
 {
     "name": "<#=model.Id.ToLower()#>",
     "description": "<#=model.Description#>",

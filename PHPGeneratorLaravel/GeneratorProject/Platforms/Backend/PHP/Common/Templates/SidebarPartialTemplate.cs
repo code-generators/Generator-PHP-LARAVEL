@@ -12,8 +12,8 @@ namespace GeneratorProject.Platforms.Backend.PHP
     using System.Linq;
     using System.Text;
     using System.Collections.Generic;
-    using Mobioos.Scaffold.TextTemplating;
-    using Mobioos.Scaffold.Generators.Helpers;
+    using Mobioos.Scaffold.BaseGenerators.TextTemplating;
+    using Mobioos.Scaffold.BaseGenerators.Helpers;
     using Mobioos.Foundation.Jade.Models;
     using Mobioos.Foundation.Jade.Extensions;
     using System;
@@ -22,7 +22,7 @@ namespace GeneratorProject.Platforms.Backend.PHP
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Common\Templates\SidebarPartialTemplate.tt"
+    #line 1 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Common\Templates\SidebarPartialTemplate.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "15.0.0.0")]
     public partial class SidebarPartialTemplate : TemplateBase
     {
@@ -33,13 +33,15 @@ namespace GeneratorProject.Platforms.Backend.PHP
         public override string TransformText()
         {
             
-            #line 1 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Common\Templates\SidebarPartialTemplate.tt"
-var dataModel = (DataModel) Model;
+            #line 2 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Common\Templates\SidebarPartialTemplate.tt"
+
+    var dataModel = (DataModel) Model;
+
             
             #line default
             #line hidden
             
-            #line 2 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Common\Templates\SidebarPartialTemplate.tt"
+            #line 5 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Common\Templates\SidebarPartialTemplate.tt"
 
     if(dataModel != null && dataModel.Entities != null && dataModel.Entities.Count > 0)
     {
@@ -50,7 +52,7 @@ var dataModel = (DataModel) Model;
             this.Write("<div id=\"sidebar-container\" class=\"left-sidebar\">\r\n    <div  class=\"sidebar-menu\"" +
                     ">\r\n        <ul>\r\n");
             
-            #line 9 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Common\Templates\SidebarPartialTemplate.tt"
+            #line 12 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Common\Templates\SidebarPartialTemplate.tt"
 
         foreach(var entity in dataModel.Entities)
         {
@@ -62,21 +64,21 @@ var dataModel = (DataModel) Model;
             #line hidden
             this.Write("        <li><a href=\"/");
             
-            #line 15 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Common\Templates\SidebarPartialTemplate.tt"
+            #line 18 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Common\Templates\SidebarPartialTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(entity.Id.ToLower()));
             
             #line default
             #line hidden
             this.Write("\" class=\"nav-link\">");
             
-            #line 15 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Common\Templates\SidebarPartialTemplate.tt"
+            #line 18 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Common\Templates\SidebarPartialTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Helper.WordSeperator(TextConverter.PascalCase(entity.Id))));
             
             #line default
             #line hidden
             this.Write("</a></li>\r\n");
             
-            #line 16 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Common\Templates\SidebarPartialTemplate.tt"
+            #line 19 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Common\Templates\SidebarPartialTemplate.tt"
 
             }
         }
@@ -86,7 +88,7 @@ var dataModel = (DataModel) Model;
             #line hidden
             this.Write("        </ul>\r\n    </div>\r\n</div>\r\n");
             
-            #line 23 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Common\Templates\SidebarPartialTemplate.tt"
+            #line 26 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Common\Templates\SidebarPartialTemplate.tt"
 
     }
 

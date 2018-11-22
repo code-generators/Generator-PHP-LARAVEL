@@ -12,8 +12,8 @@ namespace GeneratorProject.Platforms.Backend.PHP
     using System.Linq;
     using System.Text;
     using System.Collections.Generic;
-    using Mobioos.Scaffold.TextTemplating;
-    using Mobioos.Scaffold.Generators.Helpers;
+    using Mobioos.Scaffold.BaseGenerators.TextTemplating;
+    using Mobioos.Scaffold.BaseGenerators.Helpers;
     using Mobioos.Foundation.Jade.Models;
     using Mobioos.Foundation.Jade.Extensions;
     using System;
@@ -22,7 +22,7 @@ namespace GeneratorProject.Platforms.Backend.PHP
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\EditTemplate.tt"
+    #line 1 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\EditTemplate.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "15.0.0.0")]
     public partial class EditTemplate : TemplateBase
     {
@@ -33,38 +33,40 @@ namespace GeneratorProject.Platforms.Backend.PHP
         public override string TransformText()
         {
             
-            #line 1 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\EditTemplate.tt"
-var _entityInfo = (EntityInfo)Model;
+            #line 2 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\EditTemplate.tt"
+
+    var _entityInfo = (EntityInfo)Model;
+
             
             #line default
             #line hidden
             this.Write("@extends(\'layouts.master\')\r\n\r\n@section(\'content\')\r\n\r\n<div class=\"container-fluid " +
-                    "form-horizontal\">\n    <div class=\"col-lg-12\">\n        <div class=\"card\">\n       " +
-                    "     <div class=\"card-title\">\n               <h4>");
+                    "form-horizontal\">\r\n    <div class=\"col-lg-12\">\r\n        <div class=\"card\">\r\n    " +
+                    "        <div class=\"card-title\">\r\n               <h4>");
             
-            #line 6 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\EditTemplate.tt"
+            #line 13 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\EditTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Helper.WordSeperator(TextConverter.PascalCase(_entityInfo.Id))));
             
             #line default
             #line hidden
-            this.Write(" - Edit Form</h4>\n           </div>\n           <div class=\"card-body\">\r\n         " +
-                    "     {!! Form::model($item, [\'route\' => [\'");
+            this.Write(" - Edit Form</h4>\r\n           </div>\r\n           <div class=\"card-body\">\r\n       " +
+                    "       {!! Form::model($item, [\'route\' => [\'");
             
-            #line 7 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\EditTemplate.tt"
+            #line 16 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\EditTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_entityInfo.Id.ToLower()));
             
             #line default
             #line hidden
             this.Write(".update\', $item->");
             
-            #line 7 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\EditTemplate.tt"
+            #line 16 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\EditTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(GetPrimaryKey()));
             
             #line default
             #line hidden
             this.Write("], \'class\' => \'form\',\'method\' => \'PUT\']) !!}\r\n\r\n");
             
-            #line 9 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\EditTemplate.tt"
+            #line 18 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\EditTemplate.tt"
 
      foreach(var property in _entityInfo.AllProperties())
       {
@@ -76,21 +78,21 @@ var _entityInfo = (EntityInfo)Model;
             #line hidden
             this.Write("            <div class=\"form-group\">\r\n               {!! Form::label(\'");
             
-            #line 16 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\EditTemplate.tt"
+            #line 25 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\EditTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(TextConverter.CamelCase(property.Id)));
             
             #line default
             #line hidden
             this.Write("\', \'");
             
-            #line 16 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\EditTemplate.tt"
+            #line 25 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\EditTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Helper.WordSeperator(TextConverter.PascalCase(property.Id))));
             
             #line default
             #line hidden
             this.Write("\') !!}\r\n");
             
-            #line 17 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\EditTemplate.tt"
+            #line 26 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\EditTemplate.tt"
         
         if(property.IsCollection){
 
@@ -99,28 +101,28 @@ var _entityInfo = (EntityInfo)Model;
             #line hidden
             this.Write("               {!! Form::");
             
-            #line 20 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\EditTemplate.tt"
+            #line 29 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\EditTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(PHPType(property.Type)));
             
             #line default
             #line hidden
             this.Write("(\'");
             
-            #line 20 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\EditTemplate.tt"
+            #line 29 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\EditTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(TextConverter.CamelCase(property.Id)));
             
             #line default
             #line hidden
             this.Write("[]\', null, [\'class\' => \'form-control\', \'value\' => \'{{$item->");
             
-            #line 20 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\EditTemplate.tt"
+            #line 29 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\EditTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(TextConverter.CamelCase(property.Id)));
             
             #line default
             #line hidden
             this.Write("}}\']) !!}\r\n");
             
-            #line 21 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\EditTemplate.tt"
+            #line 30 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\EditTemplate.tt"
       
         }else{
 
@@ -129,28 +131,28 @@ var _entityInfo = (EntityInfo)Model;
             #line hidden
             this.Write("               {!! Form::");
             
-            #line 24 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\EditTemplate.tt"
+            #line 33 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\EditTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(PHPType(property.Type)));
             
             #line default
             #line hidden
             this.Write("(\'");
             
-            #line 24 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\EditTemplate.tt"
+            #line 33 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\EditTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(TextConverter.CamelCase(property.Id)));
             
             #line default
             #line hidden
             this.Write("\', null, [\'class\' => \'form-control\', \'value\' => \'{{$item->");
             
-            #line 24 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\EditTemplate.tt"
+            #line 33 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\EditTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(TextConverter.CamelCase(property.Id)));
             
             #line default
             #line hidden
             this.Write("}}\']) !!}\r\n");
             
-            #line 25 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\EditTemplate.tt"
+            #line 34 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\EditTemplate.tt"
 
         }
 
@@ -159,7 +161,7 @@ var _entityInfo = (EntityInfo)Model;
             #line hidden
             this.Write("           </div>\r\n");
             
-            #line 29 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\EditTemplate.tt"
+            #line 38 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\EditTemplate.tt"
 
           }
       }
@@ -168,8 +170,8 @@ var _entityInfo = (EntityInfo)Model;
             #line default
             #line hidden
             this.Write("\r\n            {!! Form::submit(\'Update\', [\'class\' => \'btn btn-info\']) !!}\r\n\r\n    " +
-                    "        {!! Form::close() !!}\r\n           </div>\n        </div>\n    </div>\n</div" +
-                    ">\n\r\n @endsection ");
+                    "        {!! Form::close() !!}\r\n           </div>\r\n        </div>\r\n    </div>\r\n</" +
+                    "div>\r\n\r\n @endsection ");
             return this.GenerationEnvironment.ToString();
         }
     }

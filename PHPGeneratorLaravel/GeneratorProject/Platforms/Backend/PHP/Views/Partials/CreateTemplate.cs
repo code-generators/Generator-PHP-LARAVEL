@@ -1,21 +1,21 @@
 ﻿using Mobioos.Foundation.Jade.Models;
-using Mobioos.Scaffold.TextTemplating;
+using Mobioos.Scaffold.BaseGenerators.TextTemplating;
 
 namespace GeneratorProject.Platforms.Backend.PHP
 {
     public partial class CreateTemplate : TemplateBase
     {
-        // private EntityInfo _model { get; set; }
+        private EntityInfo _model { get; set; }
         public CreateTemplate(EntityInfo model, string applicationId) : base(model, applicationId)
         {
-            // _model = model;
+            _model = model;
 
         }
        
         public string PHPType(string type)
         {
-            string returnType = type;
-            switch (type)
+           string returnType;
+           switch (type)
             {
                 case "number":
                     returnType = "number";

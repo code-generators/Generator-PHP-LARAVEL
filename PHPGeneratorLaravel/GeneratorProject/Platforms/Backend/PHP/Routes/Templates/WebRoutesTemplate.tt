@@ -1,4 +1,7 @@
-﻿<#@ include file="..\..\Base\Templates\Include.tt" #><#var smartApp = (SmartAppInfo)Model;#>
+﻿<#@ include file="..\..\Base\Templates\Include.tt" #>
+<#
+    var smartApp = (SmartAppInfo)Model;
+#>
 <?php
 
 /*

@@ -12,8 +12,8 @@ namespace GeneratorProject.Platforms.Backend.PHP
     using System.Linq;
     using System.Text;
     using System.Collections.Generic;
-    using Mobioos.Scaffold.TextTemplating;
-    using Mobioos.Scaffold.Generators.Helpers;
+    using Mobioos.Scaffold.BaseGenerators.TextTemplating;
+    using Mobioos.Scaffold.BaseGenerators.Helpers;
     using Mobioos.Foundation.Jade.Models;
     using Mobioos.Foundation.Jade.Extensions;
     using System;
@@ -22,7 +22,7 @@ namespace GeneratorProject.Platforms.Backend.PHP
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Common\Templates\EnvTemplate.tt"
+    #line 1 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Common\Templates\EnvTemplate.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "15.0.0.0")]
     public partial class EnvTemplate : TemplateBase
     {
@@ -32,16 +32,16 @@ namespace GeneratorProject.Platforms.Backend.PHP
         /// </summary>
         public override string TransformText()
         {
-            this.Write("\nAPP_NAME=");
+            this.Write("APP_NAME=");
             
-            #line 1 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Common\Templates\EnvTemplate.tt"
+            #line 2 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Common\Templates\EnvTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(TextConverter.PascalCase(ApplicationId)));
             
             #line default
             #line hidden
             this.Write("\r\nAPP_ENV=local\r\nAPP_KEY=base64:");
             
-            #line 3 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Common\Templates\EnvTemplate.tt"
+            #line 4 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Common\Templates\EnvTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_appKey));
             
             #line default
@@ -49,42 +49,42 @@ namespace GeneratorProject.Platforms.Backend.PHP
             this.Write("\r\nAPP_DEBUG=true\r\nAPP_URL=http://localhost\r\n\r\nLOG_CHANNEL=stack\r\n\r\nDB_CONNECTION=" +
                     "");
             
-            #line 9 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Common\Templates\EnvTemplate.tt"
+            #line 10 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Common\Templates\EnvTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_databaseType));
             
             #line default
             #line hidden
             this.Write("\r\nDB_HOST=");
             
-            #line 10 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Common\Templates\EnvTemplate.tt"
+            #line 11 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Common\Templates\EnvTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_databaseHost));
             
             #line default
             #line hidden
             this.Write("\r\nDB_PORT=");
             
-            #line 11 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Common\Templates\EnvTemplate.tt"
+            #line 12 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Common\Templates\EnvTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_databasePort));
             
             #line default
             #line hidden
             this.Write("\r\nDB_DATABASE=");
             
-            #line 12 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Common\Templates\EnvTemplate.tt"
+            #line 13 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Common\Templates\EnvTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_databaseName));
             
             #line default
             #line hidden
             this.Write("\r\nDB_USERNAME=");
             
-            #line 13 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Common\Templates\EnvTemplate.tt"
+            #line 14 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Common\Templates\EnvTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_databaseUsername));
             
             #line default
             #line hidden
             this.Write("\r\nDB_PASSWORD=");
             
-            #line 14 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Common\Templates\EnvTemplate.tt"
+            #line 15 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Common\Templates\EnvTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_databasePassword));
             
             #line default

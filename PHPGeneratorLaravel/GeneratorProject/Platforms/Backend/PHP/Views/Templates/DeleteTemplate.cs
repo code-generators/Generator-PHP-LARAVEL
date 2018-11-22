@@ -12,8 +12,8 @@ namespace GeneratorProject.Platforms.Backend.PHP
     using System.Linq;
     using System.Text;
     using System.Collections.Generic;
-    using Mobioos.Scaffold.TextTemplating;
-    using Mobioos.Scaffold.Generators.Helpers;
+    using Mobioos.Scaffold.BaseGenerators.TextTemplating;
+    using Mobioos.Scaffold.BaseGenerators.Helpers;
     using Mobioos.Foundation.Jade.Models;
     using Mobioos.Foundation.Jade.Extensions;
     using System;
@@ -22,7 +22,7 @@ namespace GeneratorProject.Platforms.Backend.PHP
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\DeleteTemplate.tt"
+    #line 1 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\DeleteTemplate.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "15.0.0.0")]
     public partial class DeleteTemplate : TemplateBase
     {
@@ -33,24 +33,26 @@ namespace GeneratorProject.Platforms.Backend.PHP
         public override string TransformText()
         {
             
-            #line 1 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\DeleteTemplate.tt"
-var _entityInfo = (EntityInfo)Model;
+            #line 2 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\DeleteTemplate.tt"
+
+    var _entityInfo = (EntityInfo)Model;
+
             
             #line default
             #line hidden
-            this.Write("\n@extends(\'layouts.master\')\r\n\r\n@section(\'content\')\n\n<div class=\"container-fluid f" +
-                    "orm-horizontal\">\r\n    <div class=\"col-lg-12\">\r\n        <div class=\"card\">\r\n     " +
-                    "       <div class=\"card-title\">\r\n\n        <h4>");
+            this.Write("@extends(\'layouts.master\')\r\n\r\n@section(\'content\')\r\n\r\n<div class=\"container-fluid " +
+                    "form-horizontal\">\r\n    <div class=\"col-lg-12\">\r\n        <div class=\"card\">\r\n    " +
+                    "        <div class=\"card-title\">\r\n\r\n        <h4>");
             
-            #line 7 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\DeleteTemplate.tt"
+            #line 14 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\DeleteTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Helper.WordSeperator(TextConverter.PascalCase(_entityInfo.Id))));
             
             #line default
             #line hidden
-            this.Write(" - Delete Form</h4>\n         </div>\r\n            <div class=\"card-body\">\n        " +
-                    "      <h3>Are you sure you want to delete this?</h3>\n");
+            this.Write(" - Delete Form</h4>\r\n         </div>\r\n            <div class=\"card-body\">\r\n      " +
+                    "        <h3>Are you sure you want to delete this?</h3>\r\n");
             
-            #line 8 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\DeleteTemplate.tt"
+            #line 18 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\DeleteTemplate.tt"
 
     foreach(var property in _entityInfo.AllProperties())
     {
@@ -58,48 +60,48 @@ var _entityInfo = (EntityInfo)Model;
             
             #line default
             #line hidden
-            this.Write("\n                <div class=\"row\">\r\n                    <label for=\"");
+            this.Write("                <div class=\"row\">\r\n                    <label for=\"");
             
-            #line 9 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\DeleteTemplate.tt"
+            #line 23 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\DeleteTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(TextConverter.CamelCase(property.Id)));
             
             #line default
             #line hidden
             this.Write("\" class = \"col-sm-2 col-form-label\">");
             
-            #line 9 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\DeleteTemplate.tt"
+            #line 23 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\DeleteTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Helper.WordSeperator(TextConverter.PascalCase(property.Id))));
             
             #line default
             #line hidden
-            this.Write("</label>\n                    <div class=\"col-sm-10 label-detail\">\n               " +
-                    "         {{$item->");
+            this.Write("</label>\r\n                    <div class=\"col-sm-10 label-detail\">\r\n             " +
+                    "           {{$item->");
             
-            #line 9 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\DeleteTemplate.tt"
+            #line 25 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\DeleteTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(TextConverter.CamelCase(property.Id)));
             
             #line default
             #line hidden
-            this.Write("}}\n                    </div>\n                 </div>\n");
+            this.Write("}}\r\n                    </div>\r\n                 </div>\r\n");
             
-            #line 9 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\DeleteTemplate.tt"
+            #line 28 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\DeleteTemplate.tt"
 
     }
 
             
             #line default
             #line hidden
-            this.Write("\n               <div class=\"row form-action\">\n                  <div class=\"col-s" +
-                    "m-10\">\n                   {!! Form::open([\'route\' => [\'");
+            this.Write("               <div class=\"row form-action\">\r\n                  <div class=\"col-s" +
+                    "m-10\">\r\n                   {!! Form::open([\'route\' => [\'");
             
-            #line 9 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\DeleteTemplate.tt"
+            #line 33 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\DeleteTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(TextConverter.CamelCase(_entityInfo.Id)));
             
             #line default
             #line hidden
             this.Write(".destroy\', $item->");
             
-            #line 9 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\DeleteTemplate.tt"
+            #line 33 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Views\Templates\DeleteTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(GetPrimaryKey()));
             
             #line default

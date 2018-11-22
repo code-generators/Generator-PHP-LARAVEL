@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <!--/-:cnd -->
   <PropertyGroup>
-    <TargetFramework>net461</TargetFramework>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Platforms\Backend\PHP\Common\Templates\.gitattributes" />
@@ -351,16 +351,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Mobioos.Foundation.Jade" Version="0.9.3" />
-    <PackageReference Include="Mobioos.Foundation.Prompts" Version="0.9.7" />
-    <PackageReference Include="Mobioos.Foundation.Prompts.Interfaces" Version="0.9.3" />
-    <PackageReference Include="Mobioos.Scaffold" Version="0.9.7" />
-    <PackageReference Include="Mobioos.Scaffold.Infrastructure" Version="0.9.3" />
-    <PackageReference Include="Mobioos.Scaffold.Models" Version="0.9.3" />
-    <PackageReference Include="Mobioos.Scaffold.Storage" Version="0.9.1" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Reference Include="mscorlib" />
   </ItemGroup>
 
@@ -552,6 +542,15 @@
 
   <ItemGroup>
     <Folder Include="Platforms\Backend\PHP\Common\Templates\resources\views\layouts\partials\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Mobioos.Foundation.Jade" Version="1.0.0" />
+    <PackageReference Include="Mobioos.Foundation.Prompt" Version="1.0.2" />
+    <PackageReference Include="Mobioos.Foundation.Prompt.Infrastructure" Version="1.0.1" />
+    <PackageReference Include="Mobioos.Scaffold.BaseGenerators" Version="1.0.2" />
+    <PackageReference Include="Mobioos.Scaffold.BaseInfrastructure" Version="1.0.2" />
+    <PackageReference Include="WorkflowCore" Version="1.0.0" />
   </ItemGroup>
 
 </Project>

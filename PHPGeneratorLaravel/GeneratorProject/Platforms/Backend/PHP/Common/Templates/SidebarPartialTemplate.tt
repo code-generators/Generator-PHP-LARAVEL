@@ -1,4 +1,7 @@
-﻿<#@ include file="..\..\Base\Templates\Include.tt"#><#var dataModel = (DataModel) Model;#>
+﻿<#@ include file="..\..\Base\Templates\Include.tt"#>
+<#
+    var dataModel = (DataModel) Model;
+#>
 <#
     if(dataModel != null && dataModel.Entities != null && dataModel.Entities.Count > 0)
     {

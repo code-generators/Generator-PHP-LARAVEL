@@ -1,4 +1,4 @@
-﻿using Mobioos.Scaffold.Generators.Helpers;
+﻿using Mobioos.Scaffold.BaseGenerators.Helpers;
 using System.Text.RegularExpressions;
 
 namespace GeneratorProject.Platforms.Backend.PHP

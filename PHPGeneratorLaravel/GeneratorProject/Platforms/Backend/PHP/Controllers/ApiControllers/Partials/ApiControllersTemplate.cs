@@ -1,6 +1,5 @@
 ﻿using Mobioos.Foundation.Jade.Models;
-using Mobioos.Scaffold.Generators.Helpers;
-using Mobioos.Scaffold.TextTemplating;
+using Mobioos.Scaffold.BaseGenerators.TextTemplating;
 
 namespace GeneratorProject.Platforms.Backend.PHP
 {
@@ -27,9 +26,6 @@ namespace GeneratorProject.Platforms.Backend.PHP
                 case "date":
                     returnType = "dateTime";
                     break;
-                //case "boolean":
-                //    returnType = "boolean";
-                //    break;
                 default:
                     returnType = type;
                     break;

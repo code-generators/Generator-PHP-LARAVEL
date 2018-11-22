@@ -12,8 +12,8 @@ namespace GeneratorProject.Platforms.Backend.PHP
     using System.Linq;
     using System.Text;
     using System.Collections.Generic;
-    using Mobioos.Scaffold.TextTemplating;
-    using Mobioos.Scaffold.Generators.Helpers;
+    using Mobioos.Scaffold.BaseGenerators.TextTemplating;
+    using Mobioos.Scaffold.BaseGenerators.Helpers;
     using Mobioos.Foundation.Jade.Models;
     using Mobioos.Foundation.Jade.Extensions;
     using System;
@@ -22,7 +22,7 @@ namespace GeneratorProject.Platforms.Backend.PHP
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Routes\Templates\ApiRoutesTemplate.tt"
+    #line 1 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Routes\Templates\ApiRoutesTemplate.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "15.0.0.0")]
     public partial class ApiRoutesTemplate : TemplateBase
     {
@@ -33,8 +33,10 @@ namespace GeneratorProject.Platforms.Backend.PHP
         public override string TransformText()
         {
             
-            #line 2 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Routes\Templates\ApiRoutesTemplate.tt"
-var smartApp = (SmartAppInfo)Model;
+            #line 2 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Routes\Templates\ApiRoutesTemplate.tt"
+
+    var smartApp = (SmartAppInfo)Model;
+
             
             #line default
             #line hidden
@@ -59,7 +61,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 ");
             
-            #line 22 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Routes\Templates\ApiRoutesTemplate.tt"
+            #line 24 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Routes\Templates\ApiRoutesTemplate.tt"
 
     if(smartApp != null && smartApp.Api != null && smartApp.Api.Count > 0)
     {
@@ -73,20 +75,20 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
             #line hidden
             this.Write("/**\r\n* Api routes for apiController ");
             
-            #line 31 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Routes\Templates\ApiRoutesTemplate.tt"
+            #line 33 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Routes\Templates\ApiRoutesTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(TextConverter.PascalCase(api.Id)));
             
             #line default
             #line hidden
             
-            #line 31 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Routes\Templates\ApiRoutesTemplate.tt"
+            #line 33 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Routes\Templates\ApiRoutesTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_controllerSuffix));
             
             #line default
             #line hidden
             this.Write("\r\n*/\r\n");
             
-            #line 33 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Routes\Templates\ApiRoutesTemplate.tt"
+            #line 35 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Routes\Templates\ApiRoutesTemplate.tt"
 
             foreach(var action in api.Actions)
             {
@@ -96,41 +98,41 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
             #line hidden
             this.Write("Route::");
             
-            #line 37 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Routes\Templates\ApiRoutesTemplate.tt"
+            #line 39 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Routes\Templates\ApiRoutesTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(GetRestApiMethod(action.Type)));
             
             #line default
             #line hidden
             this.Write("(\'");
             
-            #line 37 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Routes\Templates\ApiRoutesTemplate.tt"
+            #line 39 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Routes\Templates\ApiRoutesTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(action.Url));
             
             #line default
             #line hidden
             this.Write("\', \'");
             
-            #line 37 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Routes\Templates\ApiRoutesTemplate.tt"
+            #line 39 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Routes\Templates\ApiRoutesTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(TextConverter.PascalCase(api.Id)));
             
             #line default
             #line hidden
             
-            #line 37 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Routes\Templates\ApiRoutesTemplate.tt"
+            #line 39 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Routes\Templates\ApiRoutesTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_controllerSuffix));
             
             #line default
             #line hidden
             this.Write("@");
             
-            #line 37 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Routes\Templates\ApiRoutesTemplate.tt"
+            #line 39 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Routes\Templates\ApiRoutesTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(TextConverter.CamelCase(action.Id)));
             
             #line default
             #line hidden
             this.Write("\');\r\n");
             
-            #line 38 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Routes\Templates\ApiRoutesTemplate.tt"
+            #line 40 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Routes\Templates\ApiRoutesTemplate.tt"
 
             }
 
@@ -139,7 +141,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
             #line hidden
             this.Write("\r\n");
             
-            #line 42 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Routes\Templates\ApiRoutesTemplate.tt"
+            #line 44 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Routes\Templates\ApiRoutesTemplate.tt"
 
          }
         }

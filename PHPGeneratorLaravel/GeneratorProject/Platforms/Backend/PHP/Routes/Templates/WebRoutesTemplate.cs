@@ -12,8 +12,8 @@ namespace GeneratorProject.Platforms.Backend.PHP
     using System.Linq;
     using System.Text;
     using System.Collections.Generic;
-    using Mobioos.Scaffold.TextTemplating;
-    using Mobioos.Scaffold.Generators.Helpers;
+    using Mobioos.Scaffold.BaseGenerators.TextTemplating;
+    using Mobioos.Scaffold.BaseGenerators.Helpers;
     using Mobioos.Foundation.Jade.Models;
     using Mobioos.Foundation.Jade.Extensions;
     using System;
@@ -22,7 +22,7 @@ namespace GeneratorProject.Platforms.Backend.PHP
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Routes\Templates\WebRoutesTemplate.tt"
+    #line 1 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Routes\Templates\WebRoutesTemplate.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "15.0.0.0")]
     public partial class WebRoutesTemplate : TemplateBase
     {
@@ -33,8 +33,10 @@ namespace GeneratorProject.Platforms.Backend.PHP
         public override string TransformText()
         {
             
-            #line 1 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Routes\Templates\WebRoutesTemplate.tt"
-var smartApp = (SmartAppInfo)Model;
+            #line 2 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Routes\Templates\WebRoutesTemplate.tt"
+
+    var smartApp = (SmartAppInfo)Model;
+
             
             #line default
             #line hidden
@@ -69,7 +71,7 @@ var smartApp = (SmartAppInfo)Model;
          Route::get('/home', 'WebControllers\HomeController@index');
 ");
             
-            #line 31 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Routes\Templates\WebRoutesTemplate.tt"
+            #line 34 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Routes\Templates\WebRoutesTemplate.tt"
 
     if(smartApp != null && smartApp.DataModel != null && smartApp.DataModel.Entities != null && smartApp.DataModel.Entities.Count > 0)
     {
@@ -81,27 +83,27 @@ var smartApp = (SmartAppInfo)Model;
             #line hidden
             this.Write("        Route::resource(\'");
             
-            #line 37 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Routes\Templates\WebRoutesTemplate.tt"
+            #line 40 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Routes\Templates\WebRoutesTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(entity.Id.ToLower()));
             
             #line default
             #line hidden
             this.Write("\', \'WebControllers\\");
             
-            #line 37 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Routes\Templates\WebRoutesTemplate.tt"
+            #line 40 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Routes\Templates\WebRoutesTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(TextConverter.PascalCase(entity.Id)));
             
             #line default
             #line hidden
             
-            #line 37 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Routes\Templates\WebRoutesTemplate.tt"
+            #line 40 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Routes\Templates\WebRoutesTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_controllerSuffix));
             
             #line default
             #line hidden
             this.Write("\');\r\n");
             
-            #line 38 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Routes\Templates\WebRoutesTemplate.tt"
+            #line 41 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Routes\Templates\WebRoutesTemplate.tt"
 
         }
     }

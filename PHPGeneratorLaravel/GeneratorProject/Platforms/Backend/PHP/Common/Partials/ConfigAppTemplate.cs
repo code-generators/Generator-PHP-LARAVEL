@@ -1,4 +1,4 @@
-﻿using Mobioos.Scaffold.TextTemplating;
+﻿using Mobioos.Scaffold.BaseGenerators.TextTemplating;
 
 namespace GeneratorProject.Platforms.Backend.PHP
 {

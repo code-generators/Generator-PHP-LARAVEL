@@ -12,8 +12,8 @@ namespace GeneratorProject.Platforms.Backend.PHP
     using System.Linq;
     using System.Text;
     using System.Collections.Generic;
-    using Mobioos.Scaffold.TextTemplating;
-    using Mobioos.Scaffold.Generators.Helpers;
+    using Mobioos.Scaffold.BaseGenerators.TextTemplating;
+    using Mobioos.Scaffold.BaseGenerators.Helpers;
     using Mobioos.Foundation.Jade.Models;
     using Mobioos.Foundation.Jade.Extensions;
     using System;
@@ -22,7 +22,7 @@ namespace GeneratorProject.Platforms.Backend.PHP
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Common\Templates\ConfigAppTemplate.tt"
+    #line 1 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Common\Templates\ConfigAppTemplate.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "15.0.0.0")]
     public partial class ConfigAppTemplate : TemplateBase
     {
@@ -49,115 +49,118 @@ return [
 
     'name' => env('APP_NAME', '");
             
-            #line 2 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Common\Templates\ConfigAppTemplate.tt"
+            #line 17 "D:\Working\Mobioos\Generators new changes\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Common\Templates\ConfigAppTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(ApplicationId));
             
             #line default
             #line hidden
-            this.Write("\'),\n\n    /*\n    |----------------------------------------------------------------" +
-                    "----------\n    | Application Environment\n    |----------------------------------" +
-                    "----------------------------------------\n    |\n    | This value determines the \"" +
-                    "environment\" your application is currently\n    | running in. This may determine " +
-                    "how you prefer to configure various\n    | services your application utilizes. Se" +
-                    "t this in your \".env\" file.\n    |\n    */\n\n    \'env\' => env(\'APP_ENV\', \'productio" +
-                    "n\'),\n\n    /*\n    |--------------------------------------------------------------" +
-                    "------------\n    | Application Debug Mode\n    |---------------------------------" +
-                    "-----------------------------------------\n    |\n    | When your application is i" +
-                    "n debug mode, detailed error messages with\n    | stack traces will be shown on e" +
-                    "very error that occurs within your\n    | application. If disabled, a simple gene" +
-                    "ric error page is shown.\n    |\n    */\n\n    \'debug\' => env(\'APP_DEBUG\', false),\n\n" +
-                    "    /*\n    |--------------------------------------------------------------------" +
-                    "------\n    | Application URL\n    |----------------------------------------------" +
-                    "----------------------------\n    |\n    | This URL is used by the console to prop" +
-                    "erly generate URLs when using\n    | the Artisan command line tool. You should se" +
-                    "t this to the root of\n    | your application so that it is used when running Art" +
-                    "isan tasks.\n    |\n    */\n\n    \'url\' => env(\'APP_URL\', \'http://localhost\'),\n\n    " +
-                    "/*\n    |------------------------------------------------------------------------" +
-                    "--\n    | Application Timezone\n    |---------------------------------------------" +
-                    "-----------------------------\n    |\n    | Here you may specify the default timez" +
-                    "one for your application, which\n    | will be used by the PHP date and date-time" +
-                    " functions. We have gone\n    | ahead and set this to a sensible default for you " +
-                    "out of the box.\n    |\n    */\n\n    \'timezone\' => \'UTC\',\n\n    /*\n    |------------" +
-                    "--------------------------------------------------------------\n    | Application" +
-                    " Locale Configuration\n    |-----------------------------------------------------" +
-                    "---------------------\n    |\n    | The application locale determines the default " +
-                    "locale that will be used\n    | by the translation service provider. You are free" +
-                    " to set this value\n    | to any of the locales which will be supported by the ap" +
-                    "plication.\n    |\n    */\n\n    \'locale\' => \'en\',\n\n    /*\n    |--------------------" +
-                    "------------------------------------------------------\n    | Application Fallbac" +
-                    "k Locale\n    |------------------------------------------------------------------" +
-                    "--------\n    |\n    | The fallback locale determines the locale to use when the c" +
-                    "urrent one\n    | is not available. You may change the value to correspond to any" +
-                    " of\n    | the language folders that are provided through your application.\n    |" +
-                    "\n    */\n\n    \'fallback_locale\' => \'en\',\n\n    /*\n    |---------------------------" +
-                    "-----------------------------------------------\n    | Encryption Key\n    |------" +
-                    "--------------------------------------------------------------------\n    |\n    |" +
-                    " This key is used by the Illuminate encrypter service and should be set\n    | to" +
-                    " a random, 32 character string, otherwise these encrypted strings\n    | will not" +
-                    " be safe. Please do this before deploying an application!\n    |\n    */\n\n    \'key" +
-                    "\' => env(\'APP_KEY\'),\n\n    \'cipher\' => \'AES-256-CBC\',\n\n    /*\n    |--------------" +
-                    "------------------------------------------------------------\n    | Autoloaded Se" +
-                    "rvice Providers\n    |-----------------------------------------------------------" +
-                    "---------------\n    |\n    | The service providers listed here will be automatica" +
-                    "lly loaded on the\n    | request to your application. Feel free to add your own s" +
-                    "ervices to\n    | this array to grant expanded functionality to your applications" +
-                    ".\n    |\n    */\n\n    \'providers\' => [\n\n        /*\n         * Laravel Framework Se" +
-                    "rvice Providers...\n         */\n        Illuminate\\Auth\\AuthServiceProvider::clas" +
-                    "s,\n        Illuminate\\Broadcasting\\BroadcastServiceProvider::class,\n        Illu" +
-                    "minate\\Bus\\BusServiceProvider::class,\n        Illuminate\\Cache\\CacheServiceProvi" +
-                    "der::class,\n        Illuminate\\Foundation\\Providers\\ConsoleSupportServiceProvide" +
-                    "r::class,\n        Illuminate\\Cookie\\CookieServiceProvider::class,\n        Illumi" +
-                    "nate\\Database\\DatabaseServiceProvider::class,\n        Illuminate\\Encryption\\Encr" +
-                    "yptionServiceProvider::class,\n        Illuminate\\Filesystem\\FilesystemServicePro" +
-                    "vider::class,\n        Illuminate\\Foundation\\Providers\\FoundationServiceProvider:" +
-                    ":class,\n        Illuminate\\Hashing\\HashServiceProvider::class,\n        Illuminat" +
-                    "e\\Mail\\MailServiceProvider::class,\n        Illuminate\\Notifications\\Notification" +
-                    "ServiceProvider::class,\n        Illuminate\\Pagination\\PaginationServiceProvider:" +
-                    ":class,\n        Illuminate\\Pipeline\\PipelineServiceProvider::class,\n        Illu" +
-                    "minate\\Queue\\QueueServiceProvider::class,\n        Illuminate\\Redis\\RedisServiceP" +
-                    "rovider::class,\n        Illuminate\\Auth\\Passwords\\PasswordResetServiceProvider::" +
-                    "class,\n        Illuminate\\Session\\SessionServiceProvider::class,\n        Illumin" +
-                    "ate\\Translation\\TranslationServiceProvider::class,\n        Illuminate\\Validation" +
-                    "\\ValidationServiceProvider::class,\n        Illuminate\\View\\ViewServiceProvider::" +
-                    "class,\n\n        Collective\\Html\\HtmlServiceProvider::class,\n        Laracasts\\Fl" +
-                    "ash\\FlashServiceProvider::class,\n\n        /*\n         * Package Service Provider" +
-                    "s...\n         */\n\n        /*\n         * Application Service Providers...\n       " +
-                    "  */\n        App\\Providers\\AppServiceProvider::class,\n        App\\Providers\\Auth" +
-                    "ServiceProvider::class,\n        // App\\Providers\\BroadcastServiceProvider::class" +
-                    ",\n        App\\Providers\\EventServiceProvider::class,\n        App\\Providers\\Route" +
-                    "ServiceProvider::class,\n\n    ],\n\n    /*\n    |-----------------------------------" +
-                    "---------------------------------------\n    | Class Aliases\n    |---------------" +
-                    "-----------------------------------------------------------\n    |\n    | This arr" +
-                    "ay of class aliases will be registered when this application\n    | is started. H" +
-                    "owever, feel free to register as many as you wish as\n    | the aliases are \"lazy" +
-                    "\" loaded so they don\'t hinder performance.\n    |\n    */\n\n    \'aliases\' => [\n\n   " +
-                    "     \'App\' => Illuminate\\Support\\Facades\\App::class,\n        \'Artisan\' => Illumi" +
-                    "nate\\Support\\Facades\\Artisan::class,\n        \'Auth\' => Illuminate\\Support\\Facade" +
-                    "s\\Auth::class,\n        \'Blade\' => Illuminate\\Support\\Facades\\Blade::class,\n     " +
-                    "   \'Broadcast\' => Illuminate\\Support\\Facades\\Broadcast::class,\n        \'Bus\' => " +
-                    "Illuminate\\Support\\Facades\\Bus::class,\n        \'Cache\' => Illuminate\\Support\\Fac" +
-                    "ades\\Cache::class,\n        \'Config\' => Illuminate\\Support\\Facades\\Config::class," +
-                    "\n        \'Cookie\' => Illuminate\\Support\\Facades\\Cookie::class,\n        \'Crypt\' =" +
-                    "> Illuminate\\Support\\Facades\\Crypt::class,\n        \'DB\' => Illuminate\\Support\\Fa" +
-                    "cades\\DB::class,\n        \'Eloquent\' => Illuminate\\Database\\Eloquent\\Model::class" +
-                    ",\n        \'Event\' => Illuminate\\Support\\Facades\\Event::class,\n        \'File\' => " +
-                    "Illuminate\\Support\\Facades\\File::class,\n        \'Gate\' => Illuminate\\Support\\Fac" +
-                    "ades\\Gate::class,\n        \'Hash\' => Illuminate\\Support\\Facades\\Hash::class,\n    " +
-                    "    \'Lang\' => Illuminate\\Support\\Facades\\Lang::class,\n        \'Log\' => Illuminat" +
-                    "e\\Support\\Facades\\Log::class,\n        \'Mail\' => Illuminate\\Support\\Facades\\Mail:" +
-                    ":class,\n        \'Notification\' => Illuminate\\Support\\Facades\\Notification::class" +
-                    ",\n        \'Password\' => Illuminate\\Support\\Facades\\Password::class,\n        \'Que" +
-                    "ue\' => Illuminate\\Support\\Facades\\Queue::class,\n        \'Redirect\' => Illuminate" +
-                    "\\Support\\Facades\\Redirect::class,\n        \'Redis\' => Illuminate\\Support\\Facades\\" +
-                    "Redis::class,\n        \'Request\' => Illuminate\\Support\\Facades\\Request::class,\n  " +
-                    "      \'Response\' => Illuminate\\Support\\Facades\\Response::class,\n        \'Route\' " +
-                    "=> Illuminate\\Support\\Facades\\Route::class,\n        \'Schema\' => Illuminate\\Suppo" +
-                    "rt\\Facades\\Schema::class,\n        \'Session\' => Illuminate\\Support\\Facades\\Sessio" +
-                    "n::class,\n        \'Storage\' => Illuminate\\Support\\Facades\\Storage::class,\n      " +
-                    "  \'URL\' => Illuminate\\Support\\Facades\\URL::class,\n        \'Validator\' => Illumin" +
-                    "ate\\Support\\Facades\\Validator::class,\n        \'View\' => Illuminate\\Support\\Facad" +
-                    "es\\View::class,\n        \'Form\' => Collective\\Html\\FormFacade::class,\r\n        \'H" +
-                    "tml\' => Collective\\Html\\HtmlFacade::class,\n\n    ],\n\n];\n");
+            this.Write("\'),\r\n\r\n    /*\r\n    |-------------------------------------------------------------" +
+                    "-------------\r\n    | Application Environment\r\n    |-----------------------------" +
+                    "---------------------------------------------\r\n    |\r\n    | This value determine" +
+                    "s the \"environment\" your application is currently\r\n    | running in. This may de" +
+                    "termine how you prefer to configure various\r\n    | services your application uti" +
+                    "lizes. Set this in your \".env\" file.\r\n    |\r\n    */\r\n\r\n    \'env\' => env(\'APP_ENV" +
+                    "\', \'production\'),\r\n\r\n    /*\r\n    |----------------------------------------------" +
+                    "----------------------------\r\n    | Application Debug Mode\r\n    |---------------" +
+                    "-----------------------------------------------------------\r\n    |\r\n    | When y" +
+                    "our application is in debug mode, detailed error messages with\r\n    | stack trac" +
+                    "es will be shown on every error that occurs within your\r\n    | application. If d" +
+                    "isabled, a simple generic error page is shown.\r\n    |\r\n    */\r\n\r\n    \'debug\' => " +
+                    "env(\'APP_DEBUG\', false),\r\n\r\n    /*\r\n    |---------------------------------------" +
+                    "-----------------------------------\r\n    | Application URL\r\n    |---------------" +
+                    "-----------------------------------------------------------\r\n    |\r\n    | This U" +
+                    "RL is used by the console to properly generate URLs when using\r\n    | the Artisa" +
+                    "n command line tool. You should set this to the root of\r\n    | your application " +
+                    "so that it is used when running Artisan tasks.\r\n    |\r\n    */\r\n\r\n    \'url\' => en" +
+                    "v(\'APP_URL\', \'http://localhost\'),\r\n\r\n    /*\r\n    |------------------------------" +
+                    "--------------------------------------------\r\n    | Application Timezone\r\n    |-" +
+                    "-------------------------------------------------------------------------\r\n    |" +
+                    "\r\n    | Here you may specify the default timezone for your application, which\r\n " +
+                    "   | will be used by the PHP date and date-time functions. We have gone\r\n    | a" +
+                    "head and set this to a sensible default for you out of the box.\r\n    |\r\n    */\r\n" +
+                    "\r\n    \'timezone\' => \'UTC\',\r\n\r\n    /*\r\n    |-------------------------------------" +
+                    "-------------------------------------\r\n    | Application Locale Configuration\r\n " +
+                    "   |--------------------------------------------------------------------------\r\n" +
+                    "    |\r\n    | The application locale determines the default locale that will be u" +
+                    "sed\r\n    | by the translation service provider. You are free to set this value\r\n" +
+                    "    | to any of the locales which will be supported by the application.\r\n    |\r\n" +
+                    "    */\r\n\r\n    \'locale\' => \'en\',\r\n\r\n    /*\r\n    |--------------------------------" +
+                    "------------------------------------------\r\n    | Application Fallback Locale\r\n " +
+                    "   |--------------------------------------------------------------------------\r\n" +
+                    "    |\r\n    | The fallback locale determines the locale to use when the current o" +
+                    "ne\r\n    | is not available. You may change the value to correspond to any of\r\n  " +
+                    "  | the language folders that are provided through your application.\r\n    |\r\n   " +
+                    " */\r\n\r\n    \'fallback_locale\' => \'en\',\r\n\r\n    /*\r\n    |--------------------------" +
+                    "------------------------------------------------\r\n    | Encryption Key\r\n    |---" +
+                    "-----------------------------------------------------------------------\r\n    |\r\n" +
+                    "    | This key is used by the Illuminate encrypter service and should be set\r\n  " +
+                    "  | to a random, 32 character string, otherwise these encrypted strings\r\n    | w" +
+                    "ill not be safe. Please do this before deploying an application!\r\n    |\r\n    */\r" +
+                    "\n\r\n    \'key\' => env(\'APP_KEY\'),\r\n\r\n    \'cipher\' => \'AES-256-CBC\',\r\n\r\n    /*\r\n   " +
+                    " |--------------------------------------------------------------------------\r\n  " +
+                    "  | Autoloaded Service Providers\r\n    |-----------------------------------------" +
+                    "---------------------------------\r\n    |\r\n    | The service providers listed her" +
+                    "e will be automatically loaded on the\r\n    | request to your application. Feel f" +
+                    "ree to add your own services to\r\n    | this array to grant expanded functionalit" +
+                    "y to your applications.\r\n    |\r\n    */\r\n\r\n    \'providers\' => [\r\n\r\n        /*\r\n  " +
+                    "       * Laravel Framework Service Providers...\r\n         */\r\n        Illuminate" +
+                    "\\Auth\\AuthServiceProvider::class,\r\n        Illuminate\\Broadcasting\\BroadcastServ" +
+                    "iceProvider::class,\r\n        Illuminate\\Bus\\BusServiceProvider::class,\r\n        " +
+                    "Illuminate\\Cache\\CacheServiceProvider::class,\r\n        Illuminate\\Foundation\\Pro" +
+                    "viders\\ConsoleSupportServiceProvider::class,\r\n        Illuminate\\Cookie\\CookieSe" +
+                    "rviceProvider::class,\r\n        Illuminate\\Database\\DatabaseServiceProvider::clas" +
+                    "s,\r\n        Illuminate\\Encryption\\EncryptionServiceProvider::class,\r\n        Ill" +
+                    "uminate\\Filesystem\\FilesystemServiceProvider::class,\r\n        Illuminate\\Foundat" +
+                    "ion\\Providers\\FoundationServiceProvider::class,\r\n        Illuminate\\Hashing\\Hash" +
+                    "ServiceProvider::class,\r\n        Illuminate\\Mail\\MailServiceProvider::class,\r\n  " +
+                    "      Illuminate\\Notifications\\NotificationServiceProvider::class,\r\n        Illu" +
+                    "minate\\Pagination\\PaginationServiceProvider::class,\r\n        Illuminate\\Pipeline" +
+                    "\\PipelineServiceProvider::class,\r\n        Illuminate\\Queue\\QueueServiceProvider:" +
+                    ":class,\r\n        Illuminate\\Redis\\RedisServiceProvider::class,\r\n        Illumina" +
+                    "te\\Auth\\Passwords\\PasswordResetServiceProvider::class,\r\n        Illuminate\\Sessi" +
+                    "on\\SessionServiceProvider::class,\r\n        Illuminate\\Translation\\TranslationSer" +
+                    "viceProvider::class,\r\n        Illuminate\\Validation\\ValidationServiceProvider::c" +
+                    "lass,\r\n        Illuminate\\View\\ViewServiceProvider::class,\r\n\r\n        Collective" +
+                    "\\Html\\HtmlServiceProvider::class,\r\n        Laracasts\\Flash\\FlashServiceProvider:" +
+                    ":class,\r\n\r\n        /*\r\n         * Package Service Providers...\r\n         */\r\n\r\n " +
+                    "       /*\r\n         * Application Service Providers...\r\n         */\r\n        App" +
+                    "\\Providers\\AppServiceProvider::class,\r\n        App\\Providers\\AuthServiceProvider" +
+                    "::class,\r\n        // App\\Providers\\BroadcastServiceProvider::class,\r\n        App" +
+                    "\\Providers\\EventServiceProvider::class,\r\n        App\\Providers\\RouteServiceProvi" +
+                    "der::class,\r\n\r\n    ],\r\n\r\n    /*\r\n    |------------------------------------------" +
+                    "--------------------------------\r\n    | Class Aliases\r\n    |--------------------" +
+                    "------------------------------------------------------\r\n    |\r\n    | This array " +
+                    "of class aliases will be registered when this application\r\n    | is started. How" +
+                    "ever, feel free to register as many as you wish as\r\n    | the aliases are \"lazy\"" +
+                    " loaded so they don\'t hinder performance.\r\n    |\r\n    */\r\n\r\n    \'aliases\' => [\r\n" +
+                    "\r\n        \'App\' => Illuminate\\Support\\Facades\\App::class,\r\n        \'Artisan\' => " +
+                    "Illuminate\\Support\\Facades\\Artisan::class,\r\n        \'Auth\' => Illuminate\\Support" +
+                    "\\Facades\\Auth::class,\r\n        \'Blade\' => Illuminate\\Support\\Facades\\Blade::clas" +
+                    "s,\r\n        \'Broadcast\' => Illuminate\\Support\\Facades\\Broadcast::class,\r\n       " +
+                    " \'Bus\' => Illuminate\\Support\\Facades\\Bus::class,\r\n        \'Cache\' => Illuminate\\" +
+                    "Support\\Facades\\Cache::class,\r\n        \'Config\' => Illuminate\\Support\\Facades\\Co" +
+                    "nfig::class,\r\n        \'Cookie\' => Illuminate\\Support\\Facades\\Cookie::class,\r\n   " +
+                    "     \'Crypt\' => Illuminate\\Support\\Facades\\Crypt::class,\r\n        \'DB\' => Illumi" +
+                    "nate\\Support\\Facades\\DB::class,\r\n        \'Eloquent\' => Illuminate\\Database\\Eloqu" +
+                    "ent\\Model::class,\r\n        \'Event\' => Illuminate\\Support\\Facades\\Event::class,\r\n" +
+                    "        \'File\' => Illuminate\\Support\\Facades\\File::class,\r\n        \'Gate\' => Ill" +
+                    "uminate\\Support\\Facades\\Gate::class,\r\n        \'Hash\' => Illuminate\\Support\\Facad" +
+                    "es\\Hash::class,\r\n        \'Lang\' => Illuminate\\Support\\Facades\\Lang::class,\r\n    " +
+                    "    \'Log\' => Illuminate\\Support\\Facades\\Log::class,\r\n        \'Mail\' => Illuminat" +
+                    "e\\Support\\Facades\\Mail::class,\r\n        \'Notification\' => Illuminate\\Support\\Fac" +
+                    "ades\\Notification::class,\r\n        \'Password\' => Illuminate\\Support\\Facades\\Pass" +
+                    "word::class,\r\n        \'Queue\' => Illuminate\\Support\\Facades\\Queue::class,\r\n     " +
+                    "   \'Redirect\' => Illuminate\\Support\\Facades\\Redirect::class,\r\n        \'Redis\' =>" +
+                    " Illuminate\\Support\\Facades\\Redis::class,\r\n        \'Request\' => Illuminate\\Suppo" +
+                    "rt\\Facades\\Request::class,\r\n        \'Response\' => Illuminate\\Support\\Facades\\Res" +
+                    "ponse::class,\r\n        \'Route\' => Illuminate\\Support\\Facades\\Route::class,\r\n    " +
+                    "    \'Schema\' => Illuminate\\Support\\Facades\\Schema::class,\r\n        \'Session\' => " +
+                    "Illuminate\\Support\\Facades\\Session::class,\r\n        \'Storage\' => Illuminate\\Supp" +
+                    "ort\\Facades\\Storage::class,\r\n        \'URL\' => Illuminate\\Support\\Facades\\URL::cl" +
+                    "ass,\r\n        \'Validator\' => Illuminate\\Support\\Facades\\Validator::class,\r\n     " +
+                    "   \'View\' => Illuminate\\Support\\Facades\\View::class,\r\n        \'Form\' => Collecti" +
+                    "ve\\Html\\FormFacade::class,\r\n        \'Html\' => Collective\\Html\\HtmlFacade::class," +
+                    "\r\n\r\n    ],\r\n\r\n];\r\n");
             return this.GenerationEnvironment.ToString();
         }
     }

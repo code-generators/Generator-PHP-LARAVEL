@@ -1,4 +1,7 @@
-﻿<#@ include file="..\..\Base\Templates\Include.tt" #><#var _entityInfo = (EntityInfo)Model;#>
+﻿<#@ include file="..\..\Base\Templates\Include.tt" #>
+<#
+    var _entityInfo = (EntityInfo)Model;
+#>
 <# var keyName = GetPrimaryKey();#>
 @extends('layouts.master')
 
@@ -45,7 +48,7 @@
                  </td>
               </tr>
                @empty 
-                <p>There no <strong><#=Helper.WordSeperator(TextConverter.PascalCase(_entityInfo.Id))#></strong> defined. Click on <b>Create New</b> button to create new <#=Helper.WordSeperator(TextConverter.PascalCase(_entityInfo.Id))#>.</p>
+                <p>There no <strong><#=Helper.WordSeperator(TextConverter.PascalCase(_entityInfo.Id))#></strong> defined. Click on <strong>Create New</strong> button to create new <#=Helper.WordSeperator(TextConverter.PascalCase(_entityInfo.Id))#>.</p>
               @endforelse
             </tbody>
           </table>

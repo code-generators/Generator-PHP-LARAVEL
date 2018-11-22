@@ -178,10 +178,19 @@ body {
         color: #d4d4d4;
     }
 
+.page-titles .breadcrumb li a {
+    color: #9aa1a7;
+}
+
     .left-sidebar .sidebar-menu > ul > li > a {
         color: #8d939e;
         border-color: #252830;
     }
+
+
+.page-titles .breadcrumb li.active {
+    color: #6c757d;
+}
 
         .left-sidebar .sidebar-menu > ul > li > a.active {
             border-color: #f04940;
@@ -201,14 +210,6 @@ body {
 
     .page-titles h3 {
         color: #8d939e;
-    }
-
-    .page-titles .breadcrumb li.active {
-        color: #6c757d;
-    }
-
-    .page-titles .breadcrumb li a {
-        color: #9aa1a7;
     }
 
 /* card design */
