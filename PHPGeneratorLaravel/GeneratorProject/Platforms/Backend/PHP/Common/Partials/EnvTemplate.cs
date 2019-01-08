@@ -12,9 +12,9 @@ namespace GeneratorProject.Platforms.Backend.PHP
 
         private string _appKey { get; set; }
 
-        public EnvTemplate(string applicationId, DatabaseConfigInfo databaseConfigInfo, 
-                           RedisConfigInfo redisConfigInfo, MailConfigInfo mailConfigInfo, 
-                           SessionConfigInfo sessionConfigInfo, CockieConfigInfo cockieConfigInfo)
+        public EnvTemplate(string applicationId, DatabaseConfigInfo databaseConfigInfo,
+                           RedisConfigInfo redisConfigInfo, MailConfigInfo mailConfigInfo,
+                           SessionConfigInfo sessionConfigInfo, CockieConfigInfo cockieConfigInfo) : base(null, applicationId)
         {
             _databaseConfigInfo = databaseConfigInfo;
             _redisConfigInfo = redisConfigInfo;

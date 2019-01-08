@@ -155,16 +155,16 @@ namespace GeneratorProject.Platforms.Backend.PHP
             mailConfigInfo.Driver = (emailDriver != null && emailDriver.Count > 0) ? emailDriver.FirstOrDefault().Value : "log";
 
             var emailHost = ((IDictionary<string, object>)_context.DynamicContext).ContainsKey("EmailHost") ? _context.DynamicContext.EmailHost as List<Answer> : new List<Answer>();
-            mailConfigInfo.Driver = (emailHost != null && emailHost.Count > 0) ? emailHost.FirstOrDefault().Value : "smtp.mailtrap.io";
+            mailConfigInfo.Host = (emailHost != null && emailHost.Count > 0) ? emailHost.FirstOrDefault().Value : "smtp.mailtrap.io";
 
             var emailPort = ((IDictionary<string, object>)_context.DynamicContext).ContainsKey("EmailPort") ? _context.DynamicContext.EmailPort as List<Answer> : new List<Answer>();
-            mailConfigInfo.Driver = (emailPort != null && emailPort.Count > 0) ? emailPort.FirstOrDefault().Value : "2525";
+            mailConfigInfo.Port = (emailPort != null && emailPort.Count > 0) ? emailPort.FirstOrDefault().Value : "2525";
 
             var emailUsername = ((IDictionary<string, object>)_context.DynamicContext).ContainsKey("EmailUsername") ? _context.DynamicContext.EmailUsername as List<Answer> : new List<Answer>();
-            mailConfigInfo.Driver = (emailUsername != null && emailUsername.Count > 0) ? emailUsername.FirstOrDefault().Value : "null";
+            mailConfigInfo.Username = (emailUsername != null && emailUsername.Count > 0) ? emailUsername.FirstOrDefault().Value : "null";
 
             var emailPassword = ((IDictionary<string, object>)_context.DynamicContext).ContainsKey("EmailPassword") ? _context.DynamicContext.EmailPassword as List<Answer> : new List<Answer>();
-            mailConfigInfo.Driver = (emailPassword != null && emailPassword.Count > 0) ? emailPassword.FirstOrDefault().Value : "null";
+            mailConfigInfo.Password = (emailPassword != null && emailPassword.Count > 0) ? emailPassword.FirstOrDefault().Value : "null";
 
             return mailConfigInfo;
 

@@ -117,10 +117,10 @@ namespace GeneratorProject.Platforms.Backend.PHP
             
             #line default
             #line hidden
-            this.Write("\r\nSESSION_TABLE = \'");
+            this.Write("\r\nSESSION_TABLE=\'");
             
             #line 23 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Common\Templates\EnvTemplate.tt"
-_sessionConfigInfo.Table
+            this.Write(this.ToStringHelper.ToStringWithCulture(_sessionConfigInfo.Table));
             
             #line default
             #line hidden
