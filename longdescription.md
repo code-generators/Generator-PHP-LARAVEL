@@ -116,7 +116,9 @@
     Enter redis database password: ********
     
 **PHP framework: questions for model**
+
   Enter suffix for model: *Model*
   
 **PHP framework: questions for Api, web routes and controller**
+
   Enter suffix for controller: *Controller*
