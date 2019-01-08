@@ -83,36 +83,36 @@ namespace GeneratorProject.Platforms.Backend.PHP
 
             prompts.Push(new Question
             {
-                Name = "MemCachePassword",
-                Message = "Enter MemCache password",
+                Name = "MemCachedPassword",
+                Message = "Enter MemCached password",
                 Type = QuestionType.Password
             });
 
             prompts.Push(new Question
             {
-                Name = "MemCacheUsername",
-                Message = "Enter MemCache username",
+                Name = "MemCachedUsername",
+                Message = "Enter MemCached username",
                 Type = QuestionType.Text
             });
 
             prompts.Push(new Question
             {
-                Name = "MemCachePort",
-                Message = "Enter MemCache port number",
+                Name = "MemCachedPort",
+                Message = "Enter MemCached port number",
                 Type = QuestionType.Number
             });
 
             prompts.Push(new Question
             {
-                Name = "MemCacheHost",
-                Message = "Enter MemCache host",
+                Name = "MemCachedHost",
+                Message = "Enter MemCached host",
                 Type = QuestionType.Text
             });
 
             prompts.Push(new Question
             {
-                Name = "MemCachePersistentId",
-                Message = "Enter MemCache Persistent Id",
+                Name = "MemCachedPersistentId",
+                Message = "Enter MemCached Persistent Id",
                 Type = QuestionType.Identifier
             });
 

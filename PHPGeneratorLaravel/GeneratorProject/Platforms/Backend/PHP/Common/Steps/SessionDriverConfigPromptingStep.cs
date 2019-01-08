@@ -31,13 +31,13 @@ namespace GeneratorProject.Platforms.Backend.PHP
             var prompts = new Stack<Question>();
 
             var sessionDrivers = new List<Choice>();
-            sessionDrivers.Add(new Choice { Key = "file", Name = "file", Value = "file" });
+            //sessionDrivers.Add(new Choice { Key = "file", Name = "file", Value = "file" });
             sessionDrivers.Add(new Choice { Key = "cookie", Name = "cookie", Value = "cookie" });
             sessionDrivers.Add(new Choice { Key = "database", Name = "database", Value = "database" });
-            sessionDrivers.Add(new Choice { Key = "apc", Name = "apc", Value = "apc" });
+            //sessionDrivers.Add(new Choice { Key = "apc", Name = "apc", Value = "apc" });
             sessionDrivers.Add(new Choice { Key = "memcached", Name = "memcached", Value = "memcached" });
             sessionDrivers.Add(new Choice { Key = "redis", Name = "redis", Value = "redis" });
-            sessionDrivers.Add(new Choice { Key = "array", Name = "array", Value = "array" });
+            //sessionDrivers.Add(new Choice { Key = "array", Name = "array", Value = "array" });
 
             var expireOnClose = new List<Choice>();
             expireOnClose.Add(new Choice { Key = "expireOnCloseYes", Name = "expireOnCloseYes", Value = "expireOnCloseYes" });

@@ -68,8 +68,9 @@ namespace GeneratorProject.Platforms.Backend.PHP
                 MailConfigInfo mailConfigInfo = GetMailConfigInfo();
                 SessionConfigInfo sessionConfigInfo = GetSessionConfigInfo();
                 CockieConfigInfo cockieConfigInfo = GetCockieConfigInfo();
+                MemCachedConfigInfo memCachedConfigInfo = GetMemCachedConfigInfo();
 
-                EnvTemplate envTemplate = new EnvTemplate(smartApp.Id, databaseConfigInfo, redisConfigInfo, mailConfigInfo, sessionConfigInfo, cockieConfigInfo);
+                EnvTemplate envTemplate = new EnvTemplate(smartApp.Id, databaseConfigInfo, redisConfigInfo, mailConfigInfo, sessionConfigInfo, cockieConfigInfo, memCachedConfigInfo);
 
                 _writingService.WriteFile(Path.Combine(_context.BasePath, envTemplate.OutputPath), envTemplate.TransformText());
             }
@@ -215,15 +216,37 @@ namespace GeneratorProject.Platforms.Backend.PHP
             CockieConfigInfo cockieConfigInfo = new CockieConfigInfo();
 
             var sessionCookieName = ((IDictionary<string, object>)_context.DynamicContext).ContainsKey("SessionCookieName") ? _context.DynamicContext.SessionCookieName as List<Answer> : new List<Answer>();
-            cockieConfigInfo.Name= (sessionCookieName != null && sessionCookieName.Count > 0) ? sessionCookieName.FirstOrDefault().Value : "";
+            cockieConfigInfo.Name= (sessionCookieName != null && sessionCookieName.Count > 0) ? sessionCookieName.FirstOrDefault().Value : "php.app";
 
             var sessionCookiePath = ((IDictionary<string, object>)_context.DynamicContext).ContainsKey("SessionCookiePath") ? _context.DynamicContext.SessionCookiePath as List<Answer> : new List<Answer>();
-            cockieConfigInfo.Path = (sessionCookiePath != null && sessionCookiePath.Count > 0) ? sessionCookiePath.FirstOrDefault().Value : "";
+            cockieConfigInfo.Path = (sessionCookiePath != null && sessionCookiePath.Count > 0) ? sessionCookiePath.FirstOrDefault().Value : "/";
 
             var sessionCookieDomainName = ((IDictionary<string, object>)_context.DynamicContext).ContainsKey("SessionCookieDomainName") ? _context.DynamicContext.SessionCookieDomainName as List<Answer> : new List<Answer>();
-            cockieConfigInfo.Domain = (sessionCookieDomainName != null && sessionCookieDomainName.Count > 0) ? sessionCookieDomainName.FirstOrDefault().Value : "";
+            cockieConfigInfo.Domain = (sessionCookieDomainName != null && sessionCookieDomainName.Count > 0) ? sessionCookieDomainName.FirstOrDefault().Value : "app.domain.com";
 
             return cockieConfigInfo;
+        }
+
+        private MemCachedConfigInfo GetMemCachedConfigInfo()
+        {
+            MemCachedConfigInfo memCachedConfigInfo = new MemCachedConfigInfo();
+
+            var memCachedPersistentId = ((IDictionary<string, object>)_context.DynamicContext).ContainsKey("MemCachedPersistentId") ? _context.DynamicContext.MemCachedPersistentId as List<Answer> : new List<Answer>();
+            memCachedConfigInfo.PersistenceId = (memCachedPersistentId != null && memCachedPersistentId.Count > 0) ? memCachedPersistentId.FirstOrDefault().Value : "php.app.1000";
+
+            var memCachedHost = ((IDictionary<string, object>)_context.DynamicContext).ContainsKey("MemCachedHost") ? _context.DynamicContext.MemCachedHost as List<Answer> : new List<Answer>();
+            memCachedConfigInfo.Host = (memCachedHost != null && memCachedHost.Count > 0) ? memCachedHost.FirstOrDefault().Value : "127.0.0.1";
+
+            var memCachedPort = ((IDictionary<string, object>)_context.DynamicContext).ContainsKey("MemCachedPort") ? _context.DynamicContext.MemCachedPort as List<Answer> : new List<Answer>();
+            memCachedConfigInfo.Port = (memCachedPort != null && memCachedPort.Count > 0) ? memCachedPort.FirstOrDefault().Value : "php.app.1000";
+
+            var memCachedUsername = ((IDictionary<string, object>)_context.DynamicContext).ContainsKey("MemCachedUsername") ? _context.DynamicContext.MemCachedUsername as List<Answer> : new List<Answer>();
+            memCachedConfigInfo.Username = (memCachedUsername != null && memCachedUsername.Count > 0) ? memCachedUsername.FirstOrDefault().Value : "demouser";
+
+            var memCachedPassword = ((IDictionary<string, object>)_context.DynamicContext).ContainsKey("MemCachedPassword") ? _context.DynamicContext.MemCachedPassword as List<Answer> : new List<Answer>();
+            memCachedConfigInfo.Password = (memCachedPassword != null && memCachedPassword.Count > 0) ? memCachedPassword.FirstOrDefault().Value : "password";
+
+            return memCachedConfigInfo;
         }
     }
 }

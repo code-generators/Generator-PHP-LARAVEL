@@ -38,6 +38,12 @@ MAIL_USERNAME=<#=_mailConfigInfo.Username#>
 MAIL_PASSWORD=<#=_mailConfigInfo.Password#>
 MAIL_ENCRYPTION=null
 
+MEMCACHED_PERSISTENT_ID=<#=_mailConfigInfo.Password#>
+MEMCACHED_HOST=<#=_mailConfigInfo.Password#>
+MEMCACHED_PORT=<#=_mailConfigInfo.Password#>
+MEMCACHED_USERNAME=<#=_mailConfigInfo.Password#>
+MEMCACHED_PASSWORD=<#=_mailConfigInfo.Password#>
+
 PUSHER_APP_ID=
 PUSHER_APP_KEY=
 PUSHER_APP_SECRET=
