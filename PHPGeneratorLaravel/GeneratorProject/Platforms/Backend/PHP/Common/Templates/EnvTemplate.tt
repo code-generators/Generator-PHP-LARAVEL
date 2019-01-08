@@ -20,7 +20,7 @@ SESSION_DRIVER=<#=_sessionConfigInfo.Driver#>
 SESSION_LIFETIME=<#=_sessionConfigInfo.Lifttime#>
 SESSION_EXPIRE_ON_CLOSE=<#=_sessionConfigInfo.ExpireOnClose#>
 SESSION_ENCRYPT=<#=_sessionConfigInfo.Encrypt#>
-SESSION_TABLE = '<#__sessionConfigInfo.Table#>'
+SESSION_TABLE = '<#_sessionConfigInfo.Table#>'
 QUEUE_DRIVER=sync
 
 REDIS_HOST=<#=_redisConfigInfo.Host#>

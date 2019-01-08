@@ -120,7 +120,7 @@ namespace GeneratorProject.Platforms.Backend.PHP
             this.Write("\r\nSESSION_TABLE = \'");
             
             #line 23 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Common\Templates\EnvTemplate.tt"
-__sessionConfigInfo.Table
+_sessionConfigInfo.Table
             
             #line default
             #line hidden
