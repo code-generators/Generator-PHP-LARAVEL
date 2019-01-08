@@ -112,7 +112,7 @@
   
   (if session driver is *redis*)  
     Enter redis database host: *127.0.0.1*  
-    Enter redis database port number: *6379*
+    Enter redis database port number: *6379*  
     Enter redis database password: ********
     
 **PHP framework: questions for model**
