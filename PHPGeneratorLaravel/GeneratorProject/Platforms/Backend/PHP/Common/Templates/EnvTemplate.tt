@@ -7,28 +7,35 @@ APP_URL=http://localhost
 
 LOG_CHANNEL=stack
 
-DB_CONNECTION=<#=_databaseType#>
-DB_HOST=<#=_databaseHost#>
-DB_PORT=<#=_databasePort#>
-DB_DATABASE=<#=_databaseName#>
-DB_USERNAME=<#=_databaseUsername#>
-DB_PASSWORD=<#=_databasePassword#>
+DB_CONNECTION=<#=_databaseConfigInfo.Type#>
+DB_HOST=<#=_databaseConfigInfo.Host#>
+DB_PORT=<#=_databaseConfigInfo.Port#>
+DB_DATABASE=<#=_databaseConfigInfo.Name#>
+DB_USERNAME=<#=_databaseConfigInfo.Username#>
+DB_PASSWORD=<#=_databaseConfigInfo.Password#>
 
 BROADCAST_DRIVER=log
 CACHE_DRIVER=file
-SESSION_DRIVER=file
-SESSION_LIFETIME=120
+SESSION_DRIVER=<#=_sessionConfigInfo.Driver#>
+SESSION_LIFETIME=<#=_sessionConfigInfo.Lifttime#>
+SESSION_EXPIRE_ON_CLOSE=<#=_sessionConfigInfo.ExpireOnClose#>
+SESSION_ENCRYPT=<#=_sessionConfigInfo.Encrypt#>
+SESSION_TABLE = '<#__sessionConfigInfo.Table#>'
 QUEUE_DRIVER=sync
 
-REDIS_HOST=127.0.0.1
-REDIS_PASSWORD=null
-REDIS_PORT=6379
+REDIS_HOST=<#=_redisConfigInfo.Host#>
+REDIS_PASSWORD=<#=_redisConfigInfo.Password#>
+REDIS_PORT=<#=_redisConfigInfo.Port#>
 
-MAIL_DRIVER=log
-MAIL_HOST=smtp.mailtrap.io
-MAIL_PORT=2525
-MAIL_USERNAME=null
-MAIL_PASSWORD=null
+SESSION_COOKIE=<#=_cockieConfigInfo.Name#>
+SESSION_DOMAIN=<#=_cockieConfigInfo.Domain#>
+SESSION_COOKIE_PATH=<#=_cockieConfigInfo.Path#>
+
+MAIL_DRIVER=<#=_mailConfigInfo.Driver#>
+MAIL_HOST=<#=_mailConfigInfo.Host#>
+MAIL_PORT=<#=_mailConfigInfo.Port#>
+MAIL_USERNAME=<#=_mailConfigInfo.Username#>
+MAIL_PASSWORD=<#=_mailConfigInfo.Password#>
 MAIL_ENCRYPTION=null
 
 PUSHER_APP_ID=

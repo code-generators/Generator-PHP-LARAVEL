@@ -12,8 +12,14 @@ namespace GeneratorProject.Platforms.Backend.PHP
 
         public void Build(IWorkflowBuilder builder)
         {
-            builder.StartWith<CommonPromptingSteps>()
-                 .WaitForAnswers(nameof(CommonPromptingSteps))
+            builder.StartWith<DatabaseConfigPromptingSteps>()
+                 .WaitForAnswers(nameof(DatabaseConfigPromptingSteps))
+                 .Then<MailConfigPromptingSteps>()
+                 .WaitForAnswers(nameof(MailConfigPromptingSteps))
+                 .Then<SessionDriverConfigPromptingStep>()
+                 .WaitForAnswers(nameof(SessionDriverConfigPromptingStep))
+                 .Then<SessionConfigPromptingStep>()
+                 .WaitForAnswers(nameof(SessionConfigPromptingStep))
                  .Then<CommonWritingSteps>()
                  .Then<WorkFlowEndStepBase>();
         }
