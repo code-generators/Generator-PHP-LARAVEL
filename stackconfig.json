@@ -1,0 +1,14 @@
+{
+  "platform": "backend",
+  "name": "PHP-Laravel",
+  "version": "1.0.0",
+  "tags" : [
+    "PHP",
+	"Laravel",
+	"PHP-Laravel",
+    "backend"
+  ],
+  "description": "A PHP-Laravel backend generator",
+  "assemblyName": "GeneratorProject",
+  "audiences": "public"
+}

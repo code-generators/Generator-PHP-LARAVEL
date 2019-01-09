@@ -201,9 +201,44 @@ namespace GeneratorProject.Platforms.Backend.PHP
             
             #line default
             #line hidden
-            this.Write("\r\nMAIL_ENCRYPTION=null\r\n\r\nPUSHER_APP_ID=\r\nPUSHER_APP_KEY=\r\nPUSHER_APP_SECRET=\r\nPU" +
-                    "SHER_APP_CLUSTER=mt1\r\n\r\nMIX_PUSHER_APP_KEY=\"${PUSHER_APP_KEY}\"\r\nMIX_PUSHER_APP_C" +
-                    "LUSTER=\"${PUSHER_APP_CLUSTER}\"\r\n");
+            this.Write("\r\nMAIL_ENCRYPTION=null\r\n\r\nMEMCACHED_PERSISTENT_ID=");
+            
+            #line 41 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Common\Templates\EnvTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(_mailConfigInfo.Password));
+            
+            #line default
+            #line hidden
+            this.Write("\r\nMEMCACHED_HOST=");
+            
+            #line 42 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Common\Templates\EnvTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(_mailConfigInfo.Password));
+            
+            #line default
+            #line hidden
+            this.Write("\r\nMEMCACHED_PORT=");
+            
+            #line 43 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Common\Templates\EnvTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(_mailConfigInfo.Password));
+            
+            #line default
+            #line hidden
+            this.Write("\r\nMEMCACHED_USERNAME=");
+            
+            #line 44 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Common\Templates\EnvTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(_mailConfigInfo.Password));
+            
+            #line default
+            #line hidden
+            this.Write("\r\nMEMCACHED_PASSWORD=");
+            
+            #line 45 "D:\01 Working\01 RedFabriq\01 working\generators\php\generator\PHP-LARAVEL\PHPGeneratorLaravel\GeneratorProject\Platforms\Backend\PHP\Common\Templates\EnvTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(_mailConfigInfo.Password));
+            
+            #line default
+            #line hidden
+            this.Write("\r\n\r\nPUSHER_APP_ID=\r\nPUSHER_APP_KEY=\r\nPUSHER_APP_SECRET=\r\nPUSHER_APP_CLUSTER=mt1\r\n" +
+                    "\r\nMIX_PUSHER_APP_KEY=\"${PUSHER_APP_KEY}\"\r\nMIX_PUSHER_APP_CLUSTER=\"${PUSHER_APP_C" +
+                    "LUSTER}\"\r\n");
             return this.GenerationEnvironment.ToString();
         }
     }

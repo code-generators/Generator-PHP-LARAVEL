@@ -29,7 +29,7 @@ namespace GeneratorProject.Platforms.Backend.PHP
                 Type = QuestionType.Text
             });
 
-            await _promptingService.Prompts(nameof(RoutesPromptingSteps), prompts, "PHP framework: questions for Api and web routes");
+            await _promptingService.Prompts(nameof(RoutesPromptingSteps), prompts, "PHP framework: questions for Api, web routes and controller");
 
             return ExecutionResult.Next();
         }
