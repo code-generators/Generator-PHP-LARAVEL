@@ -1,0 +1,53 @@
+﻿<#@ include file="..\..\Base\Templates\Include.tt" #>
+<?php
+namespace App\Models;
+
+<#
+    if(_entityInfo.BaseEntity == null)
+    {
+#>
+use Illuminate\Database\Eloquent\Model;
+
+class <#=_entityInfo.Id#><#=_modelSuffix#> extends Model
+<#
+    }
+    else
+    {
+#>
+class <#=_entityInfo.Id#><#=_modelSuffix#> extends <#=TextConverter.PascalCase(_entityInfo.Extends)#><#=_modelSuffix#>
+<#
+    }
+#>
+{
+    /**
+     * The table associated with the model.
+     */
+     protected $table = '<#=_entityInfo.Id.ToLower()#>s';
+
+<#
+   if(_entityInfo.References!=null && _entityInfo.References.Count>0)
+   {
+     foreach(var reference in _entityInfo.References)
+      {
+         if(reference.IsCollection)
+         {
+#>
+     public function <#=TextConverter.CamelCase(reference.Id)#>()
+     {
+         return $this->hasMany('<#=_modelPath#><#=TextConverter.PascalCase(reference.Type)#><#=_modelSuffix#>');
+     }
+
+<#
+         }else{
+#>
+     public function <#=TextConverter.CamelCase(reference.Id)#>()
+     {
+         return $this->belongsTo('<#=_modelPath#><#=TextConverter.PascalCase(reference.Id)#><#=_modelSuffix#>');
+     }
+
+<#
+         }
+      }
+   }
+#>
+}

@@ -1,0 +1,51 @@
+﻿<#@ include file="..\..\Base\Templates\Include.tt" #>
+<#
+    var _entityInfo = (EntityInfo)Model;
+#>
+@extends('layouts.master')
+
+@section('content')
+
+<div class="container-fluid form-horizontal">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-title">
+               <h4><#=Helper.WordSeperator(TextConverter.PascalCase(_entityInfo.Id))#> - Edit Form</h4>
+           </div>
+           <div class="card-body">
+              {!! Form::model($item, ['route' => ['<#=_entityInfo.Id.ToLower()#>.update', $item-><#=GetPrimaryKey()#>], 'class' => 'form','method' => 'PUT']) !!}
+
+<#
+     foreach(var property in _entityInfo.AllProperties())
+      {
+         if(!property.IsKey)
+          {
+#>
+            <div class="form-group">
+               {!! Form::label('<#=TextConverter.CamelCase(property.Id)#>', '<#=Helper.WordSeperator(TextConverter.PascalCase(property.Id))#>') !!}
+<#        
+        if(property.IsCollection){
+#>
+               {!! Form::<#=PHPType(property.Type)#>('<#=TextConverter.CamelCase(property.Id)#>[]', null, ['class' => 'form-control', 'value' => '{{$item-><#=TextConverter.CamelCase(property.Id)#>}}']) !!}
+<#      
+        }else{
+#>
+               {!! Form::<#=PHPType(property.Type)#>('<#=TextConverter.CamelCase(property.Id)#>', null, ['class' => 'form-control', 'value' => '{{$item-><#=TextConverter.CamelCase(property.Id)#>}}']) !!}
+<#
+        }
+#>
+           </div>
+<#
+          }
+      }
+#>
+
+            {!! Form::submit('Update', ['class' => 'btn btn-info']) !!}
+
+            {!! Form::close() !!}
+           </div>
+        </div>
+    </div>
+</div>
+
+ @endsection 

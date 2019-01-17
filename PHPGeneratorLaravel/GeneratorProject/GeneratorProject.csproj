@@ -1,0 +1,556 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!--/-:cnd -->
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Platforms\Backend\PHP\Common\Templates\.gitattributes" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\.gitignore" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\app\Console\Kernel.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\app\Exceptions\Handler.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\app\Http\Controllers\Auth\ForgotPasswordController.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\app\Http\Controllers\Auth\LoginController.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\app\Http\Controllers\Auth\RegisterController.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\app\Http\Controllers\Auth\ResetPasswordController.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\app\Http\Controllers\Controller.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\app\Http\Controllers\WebControllers\HomeController.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\app\Http\Kernel.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\app\Http\Middleware\EncryptCookies.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\app\Http\Middleware\RedirectIfAuthenticated.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\app\Http\Middleware\TrimStrings.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\app\Http\Middleware\TrustProxies.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\app\Http\Middleware\VerifyCsrfToken.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\app\Providers\AppServiceProvider.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\app\Providers\AuthServiceProvider.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\app\Providers\BroadcastServiceProvider.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\app\Providers\EventServiceProvider.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\app\Providers\RouteServiceProvider.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\app\User.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\artisan" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\bootstrap\app.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\bootstrap\cache\temp.txt" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\config\auth.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\config\broadcasting.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\config\cache.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\config\database.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\config\filesystems.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\config\hashing.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\config\logging.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\config\mail.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\config\queue.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\config\services.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\config\session.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\config\view.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\database\.gitignore" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\database\factories\UserFactory.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\database\migrations\2018_8_21_00_create_password_resets_table.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\database\migrations\2018_8_21_01_create_users_table.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\database\seeds\DatabaseSeeder.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\package.json" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\phpunit.xml" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\public\.htaccess" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\public\css\app.css" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\public\css\style.css" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\public\css\theme\global.css" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\public\css\theme\theme-dark.css" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\public\css\theme\theme-light.css" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\public\css\theme\themify-icons.css" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\public\favicon.ico" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\public\index.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\public\js\app.js" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\public\robots.txt" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\resources\assets\js\app.js" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\resources\assets\js\bootstrap.js" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\resources\assets\js\components\ExampleComponent.vue" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\resources\assets\sass\app.scss" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\resources\assets\sass\_variables.scss" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\resources\lang\en\auth.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\resources\lang\en\pagination.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\resources\lang\en\passwords.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\resources\lang\en\validation.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\resources\views\auth\login.blade.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\resources\views\auth\passwords\email.blade.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\resources\views\auth\passwords\reset.blade.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\resources\views\auth\register.blade.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\resources\views\home.blade.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\resources\views\layouts\master.blade.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\resources\views\layouts\public.blade.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\resources\views\public\about.blade.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\resources\views\public\contactus.blade.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\resources\views\welcome.blade.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\routes\api.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\routes\channels.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\routes\console.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\server.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\storage\framework\cache\data\temp.txt" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\storage\framework\sessions\temp.txt" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\storage\framework\views\temp.txt" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\tests\CreatesApplication.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\tests\Feature\ExampleTest.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\tests\TestCase.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\tests\Unit\ExampleTest.php" />
+    <None Remove="Platforms\Backend\PHP\Common\Templates\webpack.mix.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\.gitattributes">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\.gitignore">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\app\Console\Kernel.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\app\Exceptions\Handler.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\app\Http\Controllers\Auth\ForgotPasswordController.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\app\Http\Controllers\Auth\LoginController.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\app\Http\Controllers\Auth\RegisterController.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\app\Http\Controllers\Auth\ResetPasswordController.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\app\Http\Controllers\Controller.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\app\Http\Controllers\WebControllers\HomeController.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\app\Http\Kernel.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\app\Http\Middleware\EncryptCookies.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\app\Http\Middleware\RedirectIfAuthenticated.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\app\Http\Middleware\TrimStrings.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\app\Http\Middleware\TrustProxies.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\app\Http\Middleware\VerifyCsrfToken.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\app\Providers\AppServiceProvider.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\app\Providers\AuthServiceProvider.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\app\Providers\BroadcastServiceProvider.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\app\Providers\EventServiceProvider.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\app\Providers\RouteServiceProvider.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\app\User.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\artisan">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\bootstrap\app.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\bootstrap\cache\temp.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\config\auth.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\config\broadcasting.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\config\cache.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\config\database.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\config\filesystems.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\config\hashing.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\config\logging.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\config\mail.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\config\queue.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\config\services.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\config\session.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\config\view.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\database\.gitignore">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\database\factories\UserFactory.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\database\migrations\2018_8_21_01_create_users_table.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\database\migrations\2018_8_21_00_create_password_resets_table.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\database\seeds\DatabaseSeeder.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\package.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\phpunit.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\public\.htaccess">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\public\css\app.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\public\css\style.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\public\css\theme\global.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\public\css\theme\theme-dark.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\public\css\theme\theme-light.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\public\css\theme\themify-icons.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\public\favicon.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\public\index.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\public\js\app.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\public\robots.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\resources\assets\js\app.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\resources\assets\js\bootstrap.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\resources\assets\js\components\ExampleComponent.vue">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\resources\assets\sass\app.scss">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\resources\assets\sass\_variables.scss">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\resources\lang\en\auth.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\resources\lang\en\pagination.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\resources\lang\en\passwords.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\resources\lang\en\validation.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\resources\views\auth\passwords\email.blade.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\resources\views\auth\passwords\reset.blade.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\resources\views\auth\register.blade.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\resources\views\auth\login.blade.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\resources\views\home.blade.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\resources\views\layouts\public.blade.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\resources\views\layouts\master.blade.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\resources\views\public\about.blade.php" />
+    <Content Include="Platforms\Backend\PHP\Common\Templates\resources\views\public\contactus.blade.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\resources\views\public\home.blade.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\routes\api.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\routes\channels.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\routes\console.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\server.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\storage\framework\cache\data\temp.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\storage\framework\sessions\temp.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\storage\framework\views\temp.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\tests\CreatesApplication.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\tests\Feature\ExampleTest.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\tests\TestCase.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\tests\Unit\ExampleTest.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Backend\PHP\Common\Templates\webpack.mix.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Platforms\Backend\PHP\Base\Templates\Include.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>Include.cs</LastGenOutput>
+      <CustomToolNamespace>GeneratorProject.Platforms.Frontend.Example</CustomToolNamespace>
+    </None>
+    <None Update="Platforms\Backend\PHP\Common\Templates\ComposerJsonTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ComposerJsonTemplate.cs</LastGenOutput>
+      <CustomToolNamespace>GeneratorProject.Platforms.Backend.PHP</CustomToolNamespace>
+    </None>
+    <None Update="Platforms\Backend\PHP\Common\Templates\ConfigAppTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ConfigAppTemplate.cs</LastGenOutput>
+      <CustomToolNamespace>GeneratorProject.Platforms.Backend.PHP</CustomToolNamespace>
+    </None>
+    <None Update="Platforms\Backend\PHP\Common\Templates\EnvTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>EnvTemplate.cs</LastGenOutput>
+      <CustomToolNamespace>GeneratorProject.Platforms.Backend.PHP</CustomToolNamespace>
+    </None>
+    <None Update="Platforms\Backend\PHP\Common\Templates\SidebarPartialTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>SidebarPartialTemplate.cs</LastGenOutput>
+      <CustomToolNamespace>GeneratorProject.Platforms.Backend.PHP</CustomToolNamespace>
+    </None>
+    <None Update="Platforms\Backend\PHP\Controllers\ApiControllers\Templates\ApiControllersTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ApiControllersTemplate.cs</LastGenOutput>
+      <CustomToolNamespace>GeneratorProject.Platforms.Backend.PHP</CustomToolNamespace>
+    </None>
+    <None Update="Platforms\Backend\PHP\Controllers\WebControllers\Templates\WebControllersTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>WebControllersTemplate.cs</LastGenOutput>
+      <CustomToolNamespace>GeneratorProject.Platforms.Backend.PHP</CustomToolNamespace>
+    </None>
+    <None Update="Platforms\Backend\PHP\Models\Templates\ModelMigrationTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ModelMigrationTemplate.cs</LastGenOutput>
+      <CustomToolNamespace>GeneratorProject.Platforms.Backend.PHP</CustomToolNamespace>
+    </None>
+    <None Update="Platforms\Backend\PHP\Models\Templates\ModelsTemplate.tt">
+      <CustomToolNamespace>GeneratorProject.Platforms.Backend.PHP</CustomToolNamespace>
+      <LastGenOutput>ModelsTemplate.cs</LastGenOutput>
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+    </None>
+    <None Update="Platforms\Backend\PHP\Routes\Templates\ApiRoutesTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ApiRoutesTemplate.cs</LastGenOutput>
+      <CustomToolNamespace>GeneratorProject.Platforms.Backend.PHP</CustomToolNamespace>
+    </None>
+    <None Update="Platforms\Backend\PHP\Routes\Templates\WebRoutesTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>WebRoutesTemplate.cs</LastGenOutput>
+      <CustomToolNamespace>GeneratorProject.Platforms.Backend.PHP</CustomToolNamespace>
+    </None>
+    <None Update="Platforms\Backend\PHP\ViewModels\Templates\ViewModelsTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ViewModelsTemplate.cs</LastGenOutput>
+      <CustomToolNamespace>GeneratorProject.Platforms.Backend.PHP</CustomToolNamespace>
+    </None>
+    <None Update="Platforms\Backend\PHP\Views\Templates\CreateTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>CreateTemplate.cs</LastGenOutput>
+      <CustomToolNamespace>GeneratorProject.Platforms.Backend.PHP</CustomToolNamespace>
+    </None>
+    <None Update="Platforms\Backend\PHP\Views\Templates\DeleteTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>DeleteTemplate.cs</LastGenOutput>
+      <CustomToolNamespace>GeneratorProject.Platforms.Backend.PHP</CustomToolNamespace>
+    </None>
+    <None Update="Platforms\Backend\PHP\Views\Templates\ShowTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ShowTemplate.cs</LastGenOutput>
+      <CustomToolNamespace>GeneratorProject.Platforms.Backend.PHP</CustomToolNamespace>
+    </None>
+    <None Update="Platforms\Backend\PHP\Views\Templates\EditTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>EditTemplate.cs</LastGenOutput>
+      <CustomToolNamespace>GeneratorProject.Platforms.Backend.PHP</CustomToolNamespace>
+    </None>
+    <None Update="Platforms\Backend\PHP\Views\Templates\IndexTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>IndexTemplate.cs</LastGenOutput>
+      <CustomToolNamespace>GeneratorProject.Platforms.Backend.PHP</CustomToolNamespace>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Platforms\Backend\PHP\Base\Templates\Include.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Include.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Platforms\Backend\PHP\Common\Templates\ComposerJsonTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ComposerJsonTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Platforms\Backend\PHP\Common\Templates\ConfigAppTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ConfigAppTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Platforms\Backend\PHP\Common\Templates\EnvTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>EnvTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Platforms\Backend\PHP\Common\Templates\SidebarPartialTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>SidebarPartialTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Platforms\Backend\PHP\Controllers\ApiControllers\Templates\ApiControllersTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ApiControllersTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Platforms\Backend\PHP\Controllers\WebControllers\Templates\WebControllersTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>WebControllersTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Platforms\Backend\PHP\Models\Templates\ModelMigrationTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ModelMigrationTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Platforms\Backend\PHP\Models\Templates\ModelsTemplate.cs">
+      <DependentUpon>ModelsTemplate.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Platforms\Backend\PHP\Routes\Templates\ApiRoutesTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ApiRoutesTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Platforms\Backend\PHP\Routes\Templates\WebRoutesTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>WebRoutesTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Platforms\Backend\PHP\ViewModels\Templates\ViewModelsTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ViewModelsTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Platforms\Backend\PHP\Views\Templates\CreateTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>CreateTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Platforms\Backend\PHP\Views\Templates\DeleteTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>DeleteTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Platforms\Backend\PHP\Views\Templates\ShowTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ShowTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Platforms\Backend\PHP\Views\Templates\EditTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>EditTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Platforms\Backend\PHP\Views\Templates\IndexTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>IndexTemplate.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Platforms\Backend\PHP\Common\Templates\resources\views\public\about.blade.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Platforms\Backend\PHP\Common\Templates\resources\views\layouts\partials\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Mobioos.Foundation.Jade" Version="1.0.0" />
+    <PackageReference Include="Mobioos.Foundation.Prompt" Version="1.0.2" />
+    <PackageReference Include="Mobioos.Foundation.Prompt.Infrastructure" Version="1.0.1" />
+    <PackageReference Include="Mobioos.Scaffold.BaseGenerators" Version="1.0.2" />
+    <PackageReference Include="Mobioos.Scaffold.BaseInfrastructure" Version="1.0.2" />
+    <PackageReference Include="WorkflowCore" Version="1.0.0" />
+  </ItemGroup>
+
+</Project>

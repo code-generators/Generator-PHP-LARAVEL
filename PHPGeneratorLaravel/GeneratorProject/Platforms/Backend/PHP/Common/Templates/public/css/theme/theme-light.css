@@ -1,0 +1,217 @@
+body {
+    background-color: #fff;
+    color: #212529;
+}
+
+/* button design */
+
+.btn.btn-primary {
+    background-color: #f04940;
+    border-color: #f04940;
+}
+
+    .btn.btn-primary:hover {
+        color: #fff;
+        background-color: #d42f27;
+        border-color: #d42f27;
+    }
+
+    .btn.btn-primary:focus {
+        box-shadow: 0 0 0 0.2rem rgba(240, 73, 64, 0.5);
+    }
+
+.btn-primary:not(:disabled):not(.disabled):active {
+    background-color: #f04940;
+    border-color: #f04940;
+}
+
+    .btn-primary:not(:disabled):not(.disabled):active:focus {
+        box-shadow: 0 0 0 0.2rem rgba(240, 73, 64, 0.5);
+    }
+
+.btn-link {
+    color: #343a40;
+}
+
+    .btn-link:hover {
+        color: #000;
+    }
+
+
+/* login form  design */
+
+.light-theme-logo {
+    display: inline-block;
+}
+
+.dark-theme-logo {
+    display: none;
+}
+
+.login-form {
+    background: #ffffff;
+}
+
+    .login-form h5 {
+        color: #455a64;
+    }
+
+    .login-form label {
+        color: #455a64;
+    }
+
+/* jumbotron design */
+
+.jumbotron {
+    background-color: #f8f9fa;
+}
+
+/* page wrapper */
+
+.page-wrapper {
+    background-color: #f8f9fa;
+}
+
+/* footer design */
+
+.footer {
+    color: #6c757d;
+}
+
+/* header design */
+
+.header {
+    background: #fff;
+    box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+    .header .header-navbar {
+        background-color: #fff;
+    }
+
+        .header .header-navbar .header-divider {
+            background-color: #d4d4d4;
+        }
+
+        .header .header-navbar .navbar-brand {
+            color: #343a40 !important;
+        }
+
+    .header .header-navbar-logo .logo-image {
+        background-image: url(../../../assets/images/mobioos-logo-black.svg);
+    }
+
+
+.navbar-menu .nav-menu-link {
+    color: #343a40;
+}
+
+    .navbar-menu .nav-menu-link:hover {
+        color: #f04940;
+    }
+
+.header .header-navbar .navbar-wrapper .notification-box, .header .header-navbar .navbar-wrapper .mail-box {
+    color: #343a40;
+}
+
+.user-profile .no-image {
+    background-color: #f04940;
+}
+
+.dropdown .dropdown-menu {
+    border-color: #d4d4d4;
+    background-color: #ffffff;
+}
+
+.dropdown .dropdown-item-text {
+    background-color: #f8f9fa;
+    color: #6c757d;
+}
+
+.dropdown .dropdown-item {
+    color: #343a40;
+}
+
+    .dropdown .dropdown-item:hover {
+        background-color: #f04940;
+        color: #ffffff;
+    }
+
+/* sidebar design */
+
+.left-sidebar {
+    box-shadow: 1px 0 20px rgba(0, 0, 0, 0.08);
+    background-color: #ffffff;
+}
+
+    .left-sidebar .sidebar-menu > ul > li.menu-title {
+        color: #d4d4d4;
+    }
+
+.page-titles .breadcrumb li a {
+    color: #6c757d;
+}
+
+    .left-sidebar .sidebar-menu > ul > li > a {
+        border-color: #ffffff;
+        color: #343a40;
+    }
+
+.page-titles .breadcrumb li.active {
+    color: #6c757d;
+}
+
+        .left-sidebar .sidebar-menu > ul > li > a.active {
+            border-color: #f04940;
+            background: #f8f9fa;
+        }
+
+        .left-sidebar .sidebar-menu > ul > li > a:hover {
+            color: #f04940;
+        }
+
+/*page title */
+
+.page-titles {
+    background: #ffffff;
+    box-shadow: 1px 0 5px rgba(0, 0, 0, 0.08);
+}
+
+    .page-titles h3 {
+        color: #343a40;
+    }
+
+/* card design */
+
+.card {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    background: #ffffff;
+}
+
+    .card .card-title {
+        color: #343a40;
+    }
+
+        .card .card-title h4 {
+            color: #343a40;
+        }
+
+/*  table design */
+
+table.table td, th {
+    border-top: 1px solid #e7e7e7;
+}
+
+table.table thead th {
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+    color: #455a64;
+}
+
+table.table tbody td {
+    color: #676767;
+}
+
+table.table td .details-view {
+    color: #f04940;
+}

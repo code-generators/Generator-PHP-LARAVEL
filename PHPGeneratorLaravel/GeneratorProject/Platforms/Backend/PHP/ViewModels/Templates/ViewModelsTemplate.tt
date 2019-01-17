@@ -1,0 +1,146 @@
+﻿<#@ include file="..\..\Base\Templates\Include.tt" #>
+<?php
+
+namespace App\ViewModels;
+
+use Illuminate\Database\Eloquent\Model;
+
+class <#= TextConverter.PascalCase(_dataModel.Id) #><#=_viewModelSuffix#> extends Model{
+<#
+        if (_dataModel.Properties != null && _dataModel.Properties.Count > 0)
+        {
+#>
+
+     //Property.
+<#
+            foreach (PropertyInfo property in _dataModel.Properties.AsEnumerable())
+            {
+                if (property.Id != null && property.Type != null && property.IsCollection)
+                {
+#>
+      private $<#= TextConverter.CamelCase(property.Id) #>;
+<#
+                }
+                else if(property.Id != null && property.Type != null ){
+#>
+      private $<#= TextConverter.CamelCase(property.Id) #>;
+<#
+                }
+            }
+        }
+#>
+
+<#
+        if (_dataModel.References != null && _dataModel.References.Count > 0)
+        {
+#>
+     //Reference
+<#
+            foreach (ReferenceInfo reference in _dataModel.References.AsEnumerable())
+            {
+                if (reference.Id != null && reference.Target != null && reference.IsCollection)
+                {
+#>
+      private $<#= TextConverter.CamelCase(reference.Id) #>;
+<#
+                }
+                 else if (reference.Id != null && reference.Type != null)
+                {
+#>
+      private $<#= TextConverter.CamelCase(reference.Id) #>;
+<#
+                }
+            }
+        }
+#>
+
+      public function __construct(
+<#
+     if (_constructorParametersObj.AsEnumerable() != null && _constructorParametersObj.AsEnumerable().Count() > 0)
+            {
+                int count = _constructorParametersObj.AsEnumerable().Count() - 1;
+                int counter = 0;
+                Dictionary<string, int> countConstructor = new Dictionary<string, int>();
+                foreach (PropertyInfo property in _constructorParametersObj.AsEnumerable())
+                {
+                    if (property.Id != null && property.Type != null)
+                    {
+                        string propertyIsModel = IsModel(property);
+                        if (!countConstructor.ContainsKey(property.Id))
+                            countConstructor.Add(property.Id, 1);
+                        else
+                            countConstructor[property.Id] = countConstructor[property.Id] + 1;
+                        string type =  property.Type;
+                        if (!propertyIsModel.Equals(""))
+                        {
+                            type = TextConverter.PascalCase(type);
+                        }
+                        if (property.IsCollection && counter == count)
+                        {
+#>
+        $<#= TextConverter.CamelCase(property.Id) + countConstructor[property.Id] #>
+<#
+                        }
+                        else if (counter == count)
+                        {
+#>
+        $<#= TextConverter.CamelCase(property.Id) + countConstructor[property.Id] #>
+<#
+                        }
+                        else if (property.IsCollection)
+                        {
+#>
+        $<#= TextConverter.CamelCase(property.Id) + countConstructor[property.Id] #>,
+<#
+                        }
+                        else
+                        {
+#>
+        $<#= TextConverter.CamelCase(property.Id) + countConstructor[property.Id] #>,
+<#
+                        }
+                    }
+                    counter++;
+                }
+            }
+#>
+      ) {
+
+<#
+            Dictionary<string, int> countObj = new Dictionary<string, int>();
+            if (_dataModel.Properties.AsEnumerable() != null)
+            {
+                foreach (PropertyInfo property in _dataModel.Properties.AsEnumerable())
+                {
+                    if (property.Id != null)
+                    {
+                        if (!countObj.ContainsKey(property.Id))
+                            countObj.Add(property.Id, 1);
+                        else
+                            countObj[property.Id] = countObj[property.Id] + 1;
+#>
+        $this-><#= TextConverter.CamelCase(property.Id) #> = $<#= TextConverter.CamelCase(property.Id) + countObj[property.Id] #>;
+<#
+                    }
+                }
+            }
+
+            if (_dataModel.References.AsEnumerable() != null)
+            {
+                foreach (ReferenceInfo reference in _dataModel.References.AsEnumerable())
+                {
+                    if (reference.Id != null)
+                    {
+                        if (!countObj.ContainsKey(reference.Id))
+                            countObj.Add(reference.Id, 1);
+                        else
+                            countObj[reference.Id] = countObj[reference.Id] + 1;
+#>
+        $this-><#= TextConverter.CamelCase(reference.Id) #> = $<#= TextConverter.CamelCase(reference.Id) + countObj[reference.Id] #>;
+<#
+                    }
+                }
+            }
+#>
+      }
+}

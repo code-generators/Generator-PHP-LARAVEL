@@ -1,0 +1,28 @@
+﻿<#@ include file="..\..\Base\Templates\Include.tt"#>
+<#
+    var dataModel = (DataModel) Model;
+#>
+<#
+    if(dataModel != null && dataModel.Entities != null && dataModel.Entities.Count > 0)
+    {
+#>
+<div id="sidebar-container" class="left-sidebar">
+    <div  class="sidebar-menu">
+        <ul>
+<#
+        foreach(var entity in dataModel.Entities)
+        {
+            if(!entity.IsAbstract)
+            {
+#>
+        <li><a href="/<#=entity.Id.ToLower()#>" class="nav-link"><#=Helper.WordSeperator(TextConverter.PascalCase(entity.Id))#></a></li>
+<#
+            }
+        }
+#>
+        </ul>
+    </div>
+</div>
+<#
+    }
+#>

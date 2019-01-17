@@ -1,0 +1,51 @@
+﻿<#@ include file="..\..\Base\Templates\Include.tt" #>
+<#
+    var _entityInfo = (EntityInfo)Model;
+#>
+@extends('layouts.master')
+
+@section('content')
+
+<div class="container-fluid form-horizontal">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-title">
+               <h4><#=Helper.WordSeperator(TextConverter.PascalCase(_entityInfo.Id))#> - Create Form</h4>
+           </div>
+           <div class="card-body">
+              {!! Form::open(['route' => '<#=_entityInfo.Id.ToLower()#>.store', 'class' => 'form','method' => 'POST']) !!}
+
+<#
+     foreach(var property in _entityInfo.AllProperties())
+      {
+         if(!property.IsKey)
+          {
+#>
+            <div class="form-group">
+               {!! Form::label('<#=TextConverter.CamelCase(property.Id)#>', '<#=Helper.WordSeperator(TextConverter.PascalCase(property.Id))#>') !!}
+<#        
+        if(property.IsCollection){
+#>
+               {!! Form::<#=PHPType(property.Type)#>('<#=TextConverter.CamelCase(property.Id)#>[]', null, ['class' => 'form-control']) !!}
+<#      
+        }else{
+#>
+               {!! Form::<#=PHPType(property.Type)#>('<#=TextConverter.CamelCase(property.Id)#>', null, ['class' => 'form-control']) !!}
+<#
+        }
+#>
+           </div>
+<#
+          }
+      }
+#>
+
+            {!! Form::submit('Save', ['class' => 'btn btn-info']) !!}
+
+            {!! Form::close() !!}
+           </div>
+        </div>
+    </div>
+</div>
+
+@endsection 

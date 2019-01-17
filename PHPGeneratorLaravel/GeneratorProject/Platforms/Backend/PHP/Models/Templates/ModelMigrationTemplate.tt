@@ -1,0 +1,73 @@
+﻿<#@ include file="..\..\Base\Templates\Include.tt" #>
+<?php
+
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class <#=TextConverter.PascalCase(_entityInfo.Id)#>sTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('<#=_entityInfo.Id.ToLower()#>s', function (Blueprint $table) {
+
+<#
+     foreach(var property in _entityInfo.AllProperties())
+      {
+        if(property.IsKey){
+#>
+           $table->increments('<#=TextConverter.CamelCase(property.Id)#>')->index();
+<#
+        }else{
+#>
+           $table-><#=PHPType(property.Type)#>('<#=TextConverter.CamelCase(property.Id)#>')<# if(!property.IsRequired){#>->nullable()<#}#>;
+<#
+        }
+      }
+#>
+
+<#
+   if(_entityInfo.References!=null && _entityInfo.References.Count>0)
+   {
+#>
+           //Relations
+<#
+      foreach(var reference in _entityInfo.References)
+      {
+         if(reference.IsCollection)
+         {
+#>
+         //  $table->integer('<#=reference.Id.ToLower()#>')->unsinged();
+         //  $table->foreign('<#=reference.Id.ToLower()#>')->references('<#=reference.ForeignKey.ToLower()#>')->on('<#=TextConverter.CamelCase(reference.Type)#>s');
+
+<#
+         }else{
+#>
+        //   $table->integer('<#=reference.Id.ToLower()#>')->unsinged();
+         //  $table->foreign('<#=reference.Id.ToLower()#>')->references('<#=reference.ForeignKey.ToLower()#>')->on('<#=TextConverter.CamelCase(reference.Type)#>s');
+
+<#
+         }
+      }
+   }
+#>
+           $table->timestamp('created_at')->nullable();
+           $table->timestamp('updated_at')->nullable();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('<#=_entityInfo.Id.ToLower()#>s');
+    }
+}
